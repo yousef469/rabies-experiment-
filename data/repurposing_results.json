@@ -1,139 +1,117 @@
 {
-  "all_predictions": [
+  "meta": {
+    "purpose": "ranked panel of candidate drugs (not a single cure)",
+    "target": "RABV glycoprotein G (PDB 6LGX)",
+    "targets_not_screened": [
+      "L",
+      "N",
+      "P",
+      "M"
+    ],
+    "screened": "held-out DILIrank test drugs only (no leakage)",
+    "panel_size": 100,
+    "score": "0.5*dil_class/3 + 0.3*clin_tox + 0.2*tox21_flags/12 (lower=better)",
+    "caveat": "ranked hypotheses for wet-lab testing, not validated actives"
+  },
+  "panel": [
     {
-      "drug": "Acyclovir",
-      "smiles": "C1=NC2=C(N1COCCO)N=C(NC2=O)N",
+      "drug": "Cefotetan disodium",
+      "smiles": "CN1C(=NN=N1)SCC2=C(N3[C@@H]([C@@](C3=O)(NC(=O)C4SC(=C(C(=O)N)C(=O)[O-])S4)OC)SC2)C(=O)[O-].[Na+].[Na+]",
       "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6861659288406372,
-      "ct_tox": 0.23365002870559692,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Albuterol",
-      "smiles": "CC(C)(C)NCC(C1=CC(=C(C=C1)O)CO)O",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6251398324966431,
-      "ct_tox": 0.012358348816633224,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Alogliptin benzoate",
-      "smiles": "CN1C(=O)C=C(N(C1=O)CC2=CC=CC=C2C#N)N3CCC[C@H](C3)N.C1=CC=C(C=C1)C(=O)O",
-      "dil_class": 2,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.6023820638656616,
-      "ct_tox": 0.03296007588505745,
-      "tx_flags": 0
+      "dil_prob": 0.719939649105072,
+      "ct_tox": 0.0015792179619893432,
+      "tx_flags": 0,
+      "tox_risk": 0.0004737653885968029,
+      "tier": "B"
     },
     {
-      "drug": "Alpidem",
-      "smiles": "CCCN(CCC)C(=O)CC1=C(N=C2N1C=C(C=C2)Cl)C3=CC=C(C=C3)Cl",
-      "dil_class": 2,
+      "drug": "Etidronate disodium",
+      "smiles": "CC(O)(P(=O)(O)[O-])P(=O)(O)[O-].[Na+].[Na+]",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.8353957533836365,
+      "ct_tox": 0.00938284769654274,
+      "tx_flags": 0,
+      "tox_risk": 0.002814854308962822,
+      "tier": "B"
+    },
+    {
+      "drug": "Sodium thiosulfate",
+      "smiles": "[O-]S(=O)(=S)[O-].[Na+].[Na+]",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.6995341777801514,
+      "ct_tox": 0.010230490006506443,
+      "tx_flags": 0,
+      "tox_risk": 0.003069147001951933,
+      "tier": "B"
+    },
+    {
+      "drug": "Methotrexate sodium",
+      "smiles": "CN(CC1=CN=C2C(=N1)C(=NC(=N2)N)N)C3=CC=C(C=C3)C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-].[Na+].[Na+]",
+      "dil_class": 0,
       "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.3655231297016144,
-      "ct_tox": 0.06698758900165558,
-      "tx_flags": 0
+      "dil_prob": 0.560417652130127,
+      "ct_tox": 0.012928356416523457,
+      "tx_flags": 0,
+      "tox_risk": 0.0038785069249570366,
+      "tier": "B"
     },
     {
-      "drug": "Amifampridine",
-      "smiles": "C1=CN=CC(=C1N)N",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.867121160030365,
-      "ct_tox": 0.13972029089927673,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Anagrelide hydrochloride",
-      "smiles": "C1C2=C(C=CC(=C2Cl)Cl)N=C3N1CC(=O)N3",
-      "dil_class": 2,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4899422526359558,
-      "ct_tox": 0.10189477354288101,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Anastrozole",
-      "smiles": "CC(C)(C#N)C1=CC(=CC(=C1)CN2C=NC=N2)C(C)(C)C#N",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.40837714076042175,
-      "ct_tox": 0.10176980495452881,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Apremilast",
-      "smiles": "CCOC1=C(C=CC(=C1)[C@@H](CS(=O)(=O)C)N2C(=O)C3=C(C2=O)C(=CC=C3)NC(=O)C)OC",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.7319543361663818,
-      "ct_tox": 0.09360332041978836,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Aprotinin",
-      "smiles": "CC[C@H](C)[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)NCC(=O)N[C@H](C(=O)N[C@H]2CSSC[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@@H](CSSC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N4CCC[C@H]4C(=O)N5CCC[C@H]5C(=O)N[C@H](C(=O)N[C@H](C(=O)NCC(=O)N6CCC[C@H]6C(=O)N[C@@H](CSSC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N3)CC(=O)O)CCC(=O)O)C)CO)CCCCN)CC7=CC=CC=C7)CC(=O)N)CC(=O)N)CCCNC(=N)N)CCCCN)C)CCCNC(=N)N)NC(=O)CNC(=O)CNC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC2=O)CCC(=O)N)[C@@H](C)O)CC8=CC=CC=C8)C(C)C)CC9=CC=C(C=C9)O)C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N1)CCCNC(=N)N)C)CCCCN)[C@@H](C)O)CC1=CC=C(C=C1)O)CCC(=O)O)CC(C)C)NC(=O)[C@H](CC1=CC=CC=C1)NC(=O)[C@H](CC(=O)O)NC(=O)[C@@H]1CCCN1C(=O)[C@H](CCCNC(=N)N)N)C(=O)NCC(=O)NCC(=O)N[C@@H](C)C(=O)O)[C@@H](C)O)CCCNC(=N)N)CCSC)CC(C)C)C)CCCCN)C)CC(=O)N)CC1=CC=C(C=C1)O)CC1=CC=CC=C1)CC1=CC=C(C=C1)O)CCCNC(=N)N)[C@@H](C)CC",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8566942811012268,
-      "ct_tox": 0.0018700625514611602,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Aripiprazole",
-      "smiles": "C1CC(=O)NC2=C1C=CC(=C2)OCCCCN3CCN(CC3)C4=C(C(=CC=C4)Cl)Cl",
-      "dil_class": 2,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.36582207679748535,
-      "ct_tox": 0.08701179921627045,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Avanafil",
-      "smiles": "COC1=C(C=C(C=C1)CNC2=NC(=NC=C2C(=O)NCC3=NC=CC=N3)N4CCC[C@H]4CO)Cl",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8300995826721191,
-      "ct_tox": 0.07220824062824249,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Avapritinib",
-      "smiles": "C[C@](C1=CC=C(C=C1)F)(C2=CN=C(N=C2)N3CCN(CC3)C4=NC=NN5C4=CC(=C5)C6=CN(N=C6)C)N",
+      "drug": "Mycophenolic sodium",
+      "smiles": "CC1=C2COC(=O)C2=C(C(=C1OC)C/C=C(\\C)/CCC(=O)[O-])O.[Na+]",
       "dil_class": 0,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3711267113685608,
-      "ct_tox": 0.24735046923160553,
-      "tx_flags": 0
+      "dil_prob": 0.43923860788345337,
+      "ct_tox": 0.01318196952342987,
+      "tx_flags": 0,
+      "tox_risk": 0.003954590857028961,
+      "tier": "B"
     },
     {
-      "drug": "Baclofen",
-      "smiles": "C1=CC(=CC=C1C(CC(=O)O)CN)Cl",
-      "dil_class": 3,
+      "drug": "Leucovorin calcium",
+      "smiles": "C1C(N(C2=C(N1)N=C(NC2=O)N)C=O)CNC3=CC=C(C=C3)C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-].[Ca+2]",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.6138222813606262,
+      "ct_tox": 0.014726994559168816,
+      "tx_flags": 0,
+      "tox_risk": 0.004418098367750645,
+      "tier": "B"
+    },
+    {
+      "drug": "Enalapril maleate",
+      "smiles": "CCOC(=O)[C@H](CCC1=CC=CC=C1)N[C@@H](C)C(=O)N2CCC[C@H]2C(=O)O.C(=C\\C(=O)O)\\C(=O)O",
+      "dil_class": 0,
       "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.4056202471256256,
-      "ct_tox": 0.02120334841310978,
-      "tx_flags": 0
+      "dil_prob": 0.7250500917434692,
+      "ct_tox": 0.015131126157939434,
+      "tx_flags": 0,
+      "tox_risk": 0.00453933784738183,
+      "tier": "B"
     },
     {
-      "drug": "Bedaquiline fumarate",
-      "smiles": "CN(C)CC[C@@](C1=CC=CC2=CC=CC=C21)([C@H](C3=CC=CC=C3)C4=C(N=C5C=CC(=CC5=C4)Br)OC)O.C(=C/C(=O)O)\\C(=O)O",
+      "drug": "Ethosuximide",
+      "smiles": "CCC1(CC(=O)NC1=O)C",
       "dil_class": 0,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.7193359136581421,
-      "ct_tox": 0.1029665395617485,
-      "tx_flags": 0
+      "dil_prob": 0.4201081693172455,
+      "ct_tox": 0.015584299340844154,
+      "tx_flags": 0,
+      "tox_risk": 0.0046752898022532465,
+      "tier": "B"
     },
     {
-      "drug": "Benzbromarone",
-      "smiles": "CCC1=C(C2=CC=CC=C2O1)C(=O)C3=CC(=C(C(=C3)Br)O)Br",
-      "dil_class": 3,
+      "drug": "Divalproex sodium",
+      "smiles": "CCCC(CCC)C(=O)O.CCCC(CCC)C(=O)[O-].[Na+]",
+      "dil_class": 0,
       "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.9743849635124207,
-      "ct_tox": 0.06758952885866165,
-      "tx_flags": 0
+      "dil_prob": 0.5650545954704285,
+      "ct_tox": 0.01807437092065811,
+      "tx_flags": 0,
+      "tox_risk": 0.005422311276197433,
+      "tier": "B"
     },
     {
       "drug": "Betaxolol hydrochloride",
@@ -142,106 +120,97 @@
       "dili_concern": "Ambiguous-DILI-concern",
       "dil_prob": 0.556349515914917,
       "ct_tox": 0.01926451362669468,
-      "tx_flags": 0
+      "tx_flags": 0,
+      "tox_risk": 0.005779354088008404,
+      "tier": "B"
     },
     {
-      "drug": "Betrixaban",
-      "smiles": "CN(C)C(=N)C1=CC=C(C=C1)C(=O)NC2=C(C=C(C=C2)OC)C(=O)NC3=NC=C(C=C3)Cl",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8519838452339172,
-      "ct_tox": 0.17073453962802887,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Bortezomib",
-      "smiles": "B([C@H](CC(C)C)NC(=O)[C@H](CC1=CC=CC=C1)NC(=O)C2=NC=CN=C2)(O)O",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.46806973218917847,
-      "ct_tox": 0.19609765708446503,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Caffeine citrate",
-      "smiles": "CN1C=NC2=C1C(=O)N(C(=O)N2C)C.C(C(=O)O)C(CC(=O)O)(C(=O)O)O",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5985665321350098,
-      "ct_tox": 0.025135463103652,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Capmatinib hydrochloride",
-      "smiles": "CNC(=O)C1=C(C=C(C=C1)C2=NN3C(=CN=C3N=C2)CC4=CC5=C(C=C4)N=CC=C5)F.O.Cl.Cl",
+      "drug": "Nifedipine",
+      "smiles": "CC1=C(C(C(=C(N1)C)C(=O)OC)C2=CC=CC=C2[N+](=O)[O-])C(=O)OC",
       "dil_class": 0,
       "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.35962745547294617,
-      "ct_tox": 0.2741174101829529,
-      "tx_flags": 0
+      "dil_prob": 0.6397109031677246,
+      "ct_tox": 0.021650055423378944,
+      "tx_flags": 0,
+      "tox_risk": 0.006495016627013683,
+      "tier": "B"
     },
     {
-      "drug": "Capreomycin sulfate",
-      "smiles": "C[C@H]1C(=O)N[C@H](C(=O)N/C(=C/NC(=O)N)/C(=O)N[C@H](C(=O)NC[C@@H](C(=O)N1)N)[C@H]2CCN=C(N2)N)CNC(=O)C[C@H](CCCN)N.C1CN=C(N[C@H]1[C@H]2C(=O)NC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N/C(=C/NC(=O)N)/C(=O)N2)CNC(=O)C[C@H](CCCN)N)CO)N)N",
+      "drug": "Panobinostat lactate",
+      "smiles": "CC1=C(C2=CC=CC=C2N1)CCNCC3=CC=C(C=C3)/C=C/C(=O)NO.CC(C(=O)O)O",
       "dil_class": 0,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.48217451572418213,
-      "ct_tox": 0.03919738531112671,
-      "tx_flags": 0
+      "dil_prob": 0.4876661002635956,
+      "ct_tox": 0.024520771577954292,
+      "tx_flags": 0,
+      "tox_risk": 0.007356231473386287,
+      "tier": "B"
     },
     {
-      "drug": "Carbinoxamine maleate",
-      "smiles": "CN(C)CCOC(C1=CC=C(C=C1)Cl)C2=CC=CC=N2.C(=C\\C(=O)O)\\C(=O)O",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6839151978492737,
-      "ct_tox": 0.04089892655611038,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cariprazine hydrochloride",
-      "smiles": "CN(C)C(=O)NC1CCC(CC1)CCN2CCN(CC2)C3=C(C(=CC=C3)Cl)Cl",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8500419855117798,
-      "ct_tox": 0.0015692748129367828,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cefotetan disodium",
-      "smiles": "CN1C(=NN=N1)SCC2=C(N3[C@@H]([C@@](C3=O)(NC(=O)C4SC(=C(C(=O)N)C(=O)[O-])S4)OC)SC2)C(=O)[O-].[Na+].[Na+]",
+      "drug": "Isradipine",
+      "smiles": "CC1=C(C(C(=C(N1)C)C(=O)OC(C)C)C2=CC=CC3=NON=C32)C(=O)OC",
       "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.719939649105072,
-      "ct_tox": 0.0015792179619893432,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cefoxitin sodium",
-      "smiles": "CO[C@@]1([C@@H]2N(C1=O)C(=C(CS2)COC(=O)N)C(=O)[O-])NC(=O)CC3=CC=CS3.[Na+]",
-      "dil_class": 2,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.7430058121681213,
-      "ct_tox": 0.01391161885112524,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cefpodoxime proxetil",
-      "smiles": "CC(C)OC(=O)OC(C)OC(=O)C1=C(CS[C@H]2N1C(=O)[C@H]2NC(=O)/C(=N\\OC)/C3=CSC(=N3)N)COC",
-      "dil_class": 2,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.9489904642105103,
-      "ct_tox": 0.007507567759603262,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cefprozil",
-      "smiles": "CC=CC1=C(N2[C@@H]([C@@H](C2=O)NC(=O)[C@@H](C3=CC=C(C=C3)O)N)SC1)C(=O)O",
-      "dil_class": 2,
       "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.9416531920433044,
-      "ct_tox": 0.004896759521216154,
-      "tx_flags": 0
+      "dil_prob": 0.5002136826515198,
+      "ct_tox": 0.02662317454814911,
+      "tx_flags": 0,
+      "tox_risk": 0.007986952364444732,
+      "tier": "B"
+    },
+    {
+      "drug": "Lisinopril",
+      "smiles": "C1C[C@H](N(C1)C(=O)[C@H](CCCCN)N[C@@H](CCC2=CC=CC=C2)C(=O)O)C(=O)O",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.5994957685470581,
+      "ct_tox": 0.028259223327040672,
+      "tx_flags": 0,
+      "tox_risk": 0.008477766998112202,
+      "tier": "B"
+    },
+    {
+      "drug": "Ramipril",
+      "smiles": "CCOC(=O)[C@H](CCC1=CC=CC=C1)N[C@@H](C)C(=O)N2[C@H]3CCC[C@H]3C[C@H]2C(=O)O",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.5918236374855042,
+      "ct_tox": 0.02948438934981823,
+      "tx_flags": 0,
+      "tox_risk": 0.008845316804945469,
+      "tier": "B"
+    },
+    {
+      "drug": "Meropenem",
+      "smiles": "C[C@@H]1[C@@H]2[C@H](C(=O)N2C(=C1S[C@H]3C[C@H](NC3)C(=O)N(C)C)C(=O)O)[C@@H](C)O",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.5076540112495422,
+      "ct_tox": 0.03663187101483345,
+      "tx_flags": 0,
+      "tox_risk": 0.010989561304450035,
+      "tier": "B"
+    },
+    {
+      "drug": "Lefamulin acetate",
+      "smiles": "C[C@@H]1CC[C@@]23CCC(=O)[C@H]2[C@@]1([C@@H](C[C@@]([C@H]([C@@H]3C)O)(C)C=C)OC(=O)CS[C@@H]4CC[C@H](C[C@H]4O)N)C.CC(=O)O",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.6000275015830994,
+      "ct_tox": 0.036923933774232864,
+      "tx_flags": 0,
+      "tox_risk": 0.011077180132269859,
+      "tier": "B"
+    },
+    {
+      "drug": "Fosamprenavir calcium",
+      "smiles": "CC(C)CN(C[C@H]([C@H](CC1=CC=CC=C1)NC(=O)O[C@H]2CCOC2)OP(=O)([O-])[O-])S(=O)(=O)C3=CC=C(C=C3)N.[Ca+2]",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.6454375386238098,
+      "ct_tox": 0.03744892030954361,
+      "tx_flags": 0,
+      "tox_risk": 0.011234676092863083,
+      "tier": "B"
     },
     {
       "drug": "Chlorambucil",
@@ -250,16 +219,350 @@
       "dili_concern": "vLess-DILI-concern",
       "dil_prob": 0.4603840410709381,
       "ct_tox": 0.03836963325738907,
-      "tx_flags": 0
+      "tx_flags": 0,
+      "tox_risk": 0.01151088997721672,
+      "tier": "B"
     },
     {
-      "drug": "Chlorpromazine hydrochloride",
-      "smiles": "CN(C)CCCN1C2=CC=CC=C2SC3=C1C=C(C=C3)Cl.Cl",
-      "dil_class": 3,
+      "drug": "Capreomycin sulfate",
+      "smiles": "C[C@H]1C(=O)N[C@H](C(=O)N/C(=C/NC(=O)N)/C(=O)N[C@H](C(=O)NC[C@@H](C(=O)N1)N)[C@H]2CCN=C(N2)N)CNC(=O)C[C@H](CCCN)N.C1CN=C(N[C@H]1[C@H]2C(=O)NC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N/C(=C/NC(=O)N)/C(=O)N2)CNC(=O)C[C@H](CCCN)N)CO)N)N",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.48217451572418213,
+      "ct_tox": 0.03919738531112671,
+      "tx_flags": 0,
+      "tox_risk": 0.011759215593338012,
+      "tier": "B"
+    },
+    {
+      "drug": "Prucalopride succinate",
+      "smiles": "COCCCN1CCC(CC1)NC(=O)C2=CC(=C(C3=C2OCC3)N)Cl.C(CC(=O)O)C(=O)O",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.6011521220207214,
+      "ct_tox": 0.039546817541122437,
+      "tx_flags": 0,
+      "tox_risk": 0.01186404526233673,
+      "tier": "B"
+    },
+    {
+      "drug": "Rosiglitazone maleate",
+      "smiles": "CN(CCOC1=CC=C(C=C1)CC2C(=O)NC(=O)S2)C3=CC=CC=N3.C(=C\\C(=O)O)\\C(=O)O",
+      "dil_class": 0,
       "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.47798821330070496,
-      "ct_tox": 0.21299926936626434,
-      "tx_flags": 0
+      "dil_prob": 0.851057231426239,
+      "ct_tox": 0.04286929592490196,
+      "tx_flags": 0,
+      "tox_risk": 0.012860788777470588,
+      "tier": "B"
+    },
+    {
+      "drug": "Ergocalciferol",
+      "smiles": "C[C@H](/C=C/[C@H](C)C(C)C)[C@H]1CC[C@@H]\\2[C@@]1(CCC/C2=C\\C=C/3\\C[C@H](CCC3=C)O)C",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.5290279984474182,
+      "ct_tox": 0.04639999568462372,
+      "tx_flags": 0,
+      "tox_risk": 0.013919998705387114,
+      "tier": "B"
+    },
+    {
+      "drug": "Ribociclib succinate",
+      "smiles": "CN(C)C(=O)C1=CC2=CN=C(N=C2N1C3CCCC3)NC4=NC=C(C=C4)N5CCNCC5.C(CC(=O)O)C(=O)O",
+      "dil_class": 0,
+      "dili_concern": "vMost-DILI-concern",
+      "dil_prob": 0.4130713641643524,
+      "ct_tox": 0.05314118415117264,
+      "tx_flags": 0,
+      "tox_risk": 0.01594235524535179,
+      "tier": "B"
+    },
+    {
+      "drug": "Fosaprepitant dimeglumine",
+      "smiles": "C[C@H](C1=CC(=CC(=C1)C(F)(F)F)C(F)(F)F)O[C@@H]2[C@@H](N(CCO2)CC3=NN(C(=O)N3)P(=O)(O)O)C4=CC=C(C=C4)F.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.4551311135292053,
+      "ct_tox": 0.057560939341783524,
+      "tx_flags": 0,
+      "tox_risk": 0.017268281802535056,
+      "tier": "B"
+    },
+    {
+      "drug": "Pralidoxime chloride",
+      "smiles": "C[N+]1=CC=CC=C1/C=N/O.[Cl-]",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.4729780852794647,
+      "ct_tox": 0.06459704786539078,
+      "tx_flags": 0,
+      "tox_risk": 0.01937911435961723,
+      "tier": "B"
+    },
+    {
+      "drug": "Indapamide",
+      "smiles": "CC1CC2=CC=CC=C2N1NC(=O)C3=CC(=C(C=C3)Cl)S(=O)(=O)N",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.3905671238899231,
+      "ct_tox": 0.07675571739673615,
+      "tx_flags": 0,
+      "tox_risk": 0.023026715219020843,
+      "tier": "B"
+    },
+    {
+      "drug": "Levonorgestrel",
+      "smiles": "CC[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@]2(C#C)O)CCC4=CC(=O)CC[C@H]34",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.8453053832054138,
+      "ct_tox": 0.08048318326473236,
+      "tx_flags": 0,
+      "tox_risk": 0.024144954979419708,
+      "tier": "B"
+    },
+    {
+      "drug": "Fluciclovine f-18",
+      "smiles": "C1C(CC1(C(=O)O)N)[18F]",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.48919668793678284,
+      "ct_tox": 0.08130088448524475,
+      "tx_flags": 0,
+      "tox_risk": 0.024390265345573425,
+      "tier": "B"
+    },
+    {
+      "drug": "Vinorelbine tartrate",
+      "smiles": "CCC1=C[C@H]2C[C@@](C3=C(CN(C2)C1)C4=CC=CC=C4N3)(C5=C(C=C6C(=C5)[C@]78CCN9[C@H]7[C@@](C=CC9)([C@H]([C@@]([C@@H]8N6C)(C(=O)OC)O)OC(=O)C)CC)OC)C(=O)OC.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.7952771186828613,
+      "ct_tox": 0.10016665607690811,
+      "tx_flags": 0,
+      "tox_risk": 0.030049996823072432,
+      "tier": "B"
+    },
+    {
+      "drug": "Prazosin hydrochloride",
+      "smiles": "COC1=C(C=C2C(=C1)C(=NC(=N2)N3CCN(CC3)C(=O)C4=CC=CO4)N)OC",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.3763389587402344,
+      "ct_tox": 0.10148128867149353,
+      "tx_flags": 0,
+      "tox_risk": 0.03044438660144806,
+      "tier": "B"
+    },
+    {
+      "drug": "Anastrozole",
+      "smiles": "CC(C)(C#N)C1=CC(=CC(=C1)CN2C=NC=N2)C(C)(C)C#N",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.40837714076042175,
+      "ct_tox": 0.10176980495452881,
+      "tx_flags": 0,
+      "tox_risk": 0.03053094148635864,
+      "tier": "B"
+    },
+    {
+      "drug": "Zoledronic acid",
+      "smiles": "C1=CN(C=N1)CC(O)(P(=O)(O)O)P(=O)(O)O",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.6102048754692078,
+      "ct_tox": 0.10289675742387772,
+      "tx_flags": 0,
+      "tox_risk": 0.030869027227163313,
+      "tier": "B"
+    },
+    {
+      "drug": "Bedaquiline fumarate",
+      "smiles": "CN(C)CC[C@@](C1=CC=CC2=CC=CC=C21)([C@H](C3=CC=CC=C3)C4=C(N=C5C=CC(=CC5=C4)Br)OC)O.C(=C/C(=O)O)\\C(=O)O",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.7193359136581421,
+      "ct_tox": 0.1029665395617485,
+      "tx_flags": 0,
+      "tox_risk": 0.03088996186852455,
+      "tier": "B"
+    },
+    {
+      "drug": "Teriflunomide",
+      "smiles": "C/C(=C(\\C#N)/C(=O)NC1=CC=C(C=C1)C(F)(F)F)/O",
+      "dil_class": 0,
+      "dili_concern": "vMost-DILI-concern",
+      "dil_prob": 0.5418464541435242,
+      "ct_tox": 0.10621987283229828,
+      "tx_flags": 0,
+      "tox_risk": 0.031865961849689484,
+      "tier": "B"
+    },
+    {
+      "drug": "Tetrabamate",
+      "smiles": "CCCCCOC(CN1C(=O)C(C(=O)N(C1=O)CC(COCCCC)OC(=O)N)(CC)C2=CC=CC=C2)OC(=O)N.CCCCOCC(CN1C(=O)C(C(=O)NC1=O)(CC)C2=CC=CC=C2)OC(=O)N.CCC1(C(=O)NC(=O)NC1=O)C2=CC=CC=C2",
+      "dil_class": 0,
+      "dili_concern": "vMost-DILI-concern",
+      "dil_prob": 0.45725807547569275,
+      "ct_tox": 0.10703547298908234,
+      "tx_flags": 0,
+      "tox_risk": 0.0321106418967247,
+      "tier": "B"
+    },
+    {
+      "drug": "Triptorelin pamoate",
+      "smiles": "CC(C)C[C@@H](C(=O)N[C@@H](CCCN=C(N)N)C(=O)N1CCC[C@H]1C(=O)NCC(=O)N)NC(=O)[C@@H](CC2=CNC3=CC=CC=C32)NC(=O)[C@H](CC4=CC=C(C=C4)O)NC(=O)[C@H](CO)NC(=O)[C@H](CC5=CNC6=CC=CC=C65)NC(=O)[C@H](CC7=CN=CN7)NC(=O)[C@@H]8CCC(=O)N8.C1=CC=C2C(=C1)C=C(C(=C2CC3=C(C(=CC4=CC=CC=C43)C(=O)O)O)O)C(=O)O",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.4803828001022339,
+      "ct_tox": 0.11455634981393814,
+      "tx_flags": 0,
+      "tox_risk": 0.03436690494418144,
+      "tier": "B"
+    },
+    {
+      "drug": "Fluoxymesterone",
+      "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]3[C@@]2([C@H](C[C@]4([C@H]3CC[C@]4(C)O)C)O)F",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.3689592778682709,
+      "ct_tox": 0.1169784665107727,
+      "tx_flags": 0,
+      "tox_risk": 0.03509353995323181,
+      "tier": "B"
+    },
+    {
+      "drug": "Vinblastine sulfate",
+      "smiles": "CC[C@@]1(C[C@H]2C[C@@](C3=C(CCN(C2)C1)C4=CC=CC=C4N3)(C5=C(C=C6C(=C5)[C@]78CCN9[C@H]7[C@@](C=CC9)([C@H]([C@@]([C@@H]8N6C)(C(=O)OC)O)OC(=O)C)CC)OC)C(=O)OC)O.OS(=O)(=O)O",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.7074456810951233,
+      "ct_tox": 0.11885875463485718,
+      "tx_flags": 0,
+      "tox_risk": 0.03565762639045715,
+      "tier": "B"
+    },
+    {
+      "drug": "Streptomycin sulfate",
+      "smiles": "C[C@H]1[C@@]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H]([C@H]([C@@H]([C@H]2O)O)N=C(N)N)O)N=C(N)N)O[C@H]3[C@H]([C@@H]([C@H]([C@@H](O3)CO)O)O)NC)(C=O)O",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.5170691609382629,
+      "ct_tox": 0.12298136204481125,
+      "tx_flags": 0,
+      "tox_risk": 0.036894408613443376,
+      "tier": "B"
+    },
+    {
+      "drug": "Venetoclax",
+      "smiles": "CC1(CCC(=C(C1)C2=CC=C(C=C2)Cl)CN3CCN(CC3)C4=CC(=C(C=C4)C(=O)NS(=O)(=O)C5=CC(=C(C=C5)NCC6CCOCC6)[N+](=O)[O-])OC7=CN=C8C(=C7)C=CN8)C",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.7984670400619507,
+      "ct_tox": 0.1233716681599617,
+      "tx_flags": 0,
+      "tox_risk": 0.03701150044798851,
+      "tier": "B"
+    },
+    {
+      "drug": "Lamivudine",
+      "smiles": "C1[C@H](O[C@H](S1)CO)N2C=CC(=NC2=O)N",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.6548177003860474,
+      "ct_tox": 0.13008330762386322,
+      "tx_flags": 0,
+      "tox_risk": 0.039024992287158965,
+      "tier": "B"
+    },
+    {
+      "drug": "Protirelin",
+      "smiles": "C1C[C@H](N(C1)C(=O)[C@H](CC2=CN=CN2)NC(=O)[C@@H]3CCC(=O)N3)C(=O)N",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.6061066389083862,
+      "ct_tox": 0.13384544849395752,
+      "tx_flags": 0,
+      "tox_risk": 0.04015363454818725,
+      "tier": "B"
+    },
+    {
+      "drug": "Cidofovir",
+      "smiles": "C1=CN(C(=O)N=C1N)C[C@@H](CO)OCP(=O)(O)O",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.3365178108215332,
+      "ct_tox": 0.13385111093521118,
+      "tx_flags": 0,
+      "tox_risk": 0.04015533328056335,
+      "tier": "B"
+    },
+    {
+      "drug": "Prednisolone",
+      "smiles": "C[C@]12C[C@@H]([C@H]3[C@H]([C@@H]1CC[C@@]2(C(=O)CO)O)CCC4=CC(=O)C=C[C@]34C)O",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.5420123338699341,
+      "ct_tox": 0.14421312510967255,
+      "tx_flags": 0,
+      "tox_risk": 0.04326393753290176,
+      "tier": "B"
+    },
+    {
+      "drug": "Prednisone",
+      "smiles": "C[C@]12CC(=O)[C@H]3[C@H]([C@@H]1CC[C@@]2(C(=O)CO)O)CCC4=CC(=O)C=C[C@]34C",
+      "dil_class": 0,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.5687192678451538,
+      "ct_tox": 0.149332657456398,
+      "tx_flags": 0,
+      "tox_risk": 0.0447997972369194,
+      "tier": "B"
+    },
+    {
+      "drug": "Naldemedine tosylate",
+      "smiles": "CC1=CC=C(C=C1)S(=O)(=O)O.CC(C)(C1=NC(=NO1)C2=CC=CC=C2)NC(=O)C3=C([C@H]4[C@@]56CCN([C@@H]([C@@]5(C3)O)CC7=C6C(=C(C=C7)O)O4)CC8CC8)O",
+      "dil_class": 0,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.5466742515563965,
+      "ct_tox": 0.14966930449008942,
+      "tx_flags": 0,
+      "tox_risk": 0.044900791347026826,
+      "tier": "B"
+    },
+    {
+      "drug": "Enasidenib mesylate",
+      "smiles": "CC(C)(CNC1=NC(=NC(=N1)C2=NC(=CC=C2)C(F)(F)F)NC3=CC(=NC=C3)C(F)(F)F)O.CS(=O)(=O)O",
+      "dil_class": 0,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.8046408891677856,
+      "ct_tox": 0.16396689414978027,
+      "tx_flags": 0,
+      "tox_risk": 0.04919006824493408,
+      "tier": "B"
+    },
+    {
+      "drug": "Exemestane",
+      "smiles": "C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CC(=C)C4=CC(=O)C=C[C@]34C",
+      "dil_class": 0,
+      "dili_concern": "vMost-DILI-concern",
+      "dil_prob": 0.7099707722663879,
+      "ct_tox": 0.1736713945865631,
+      "tx_flags": 0,
+      "tox_risk": 0.05210141837596893,
+      "tier": "B"
+    },
+    {
+      "drug": "Bortezomib",
+      "smiles": "B([C@H](CC(C)C)NC(=O)[C@H](CC1=CC=CC=C1)NC(=O)C2=NC=CN=C2)(O)O",
+      "dil_class": 0,
+      "dili_concern": "vMost-DILI-concern",
+      "dil_prob": 0.46806973218917847,
+      "ct_tox": 0.19609765708446503,
+      "tx_flags": 0,
+      "tox_risk": 0.058829297125339505,
+      "tier": "B"
     },
     {
       "drug": "Chlorthalidone",
@@ -268,790 +571,9 @@
       "dili_concern": "Ambiguous-DILI-concern",
       "dil_prob": 0.6150925159454346,
       "ct_tox": 0.20813536643981934,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cidofovir",
-      "smiles": "C1=CN(C(=O)N=C1N)C[C@@H](CO)OCP(=O)(O)O",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3365178108215332,
-      "ct_tox": 0.13385111093521118,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cinchophen",
-      "smiles": "C1=CC=C(C=C1)C2=NC3=CC=CC=C3C(=C2)C(=O)O",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.43368059396743774,
-      "ct_tox": 0.19501124322414398,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cisplatin",
-      "smiles": "N.N.Cl[Pt]Cl",
-      "dil_class": 1,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.8927931785583496,
-      "ct_tox": 0.008163372986018658,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Clomiphene citrate",
-      "smiles": "CCN(CC)CCOC1=CC=C(C=C1)C(=C(C2=CC=CC=C2)Cl)C3=CC=CC=C3.C(C(=O)O)C(CC(=O)O)(C(=O)O)O",
-      "dil_class": 3,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.3493900001049042,
-      "ct_tox": 0.20531144738197327,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Clotrimazole",
-      "smiles": "C1=CC=C(C=C1)C(C2=CC=CC=C2)(C3=CC=CC=C3Cl)N4C=CN=C4",
-      "dil_class": 3,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.8063679337501526,
-      "ct_tox": 0.19054850935935974,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Corticorelin ovine triflutate",
-      "smiles": "CC[C@H](C)[C@@H](C(=O)N[C@@H](CO)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H](CC2=CN=CN2)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CCSC)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](C)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@@H](CCC(=O)N)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](CCC(=O)N)C(=O)N[C@@H](CCC(=O)N)C(=O)N[C@@H](C)C(=O)N[C@@H](CC3=CN=CN3)C(=O)N[C@@H](CO)C(=O)N[C@@H](CC(=O)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@@H]([C@@H](C)CC)C(=O)N[C@@H](C)C(=O)N)NC(=O)[C@@H]4CCCN4C(=O)[C@@H]5CCCN5C(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(=O)N)NC(=O)[C@H](CO)N",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6881124377250671,
-      "ct_tox": 0.007982657290995121,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cromoglicate",
-      "smiles": "C1=CC2=C(C(=C1)OCC(COC3=CC=CC4=C3C(=O)C=C(O4)C(=O)O)O)C(=O)C=C(O2)C(=O)O",
-      "dil_class": 3,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.7696242332458496,
-      "ct_tox": 0.09725086390972137,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Cytarabine",
-      "smiles": "C1=CN(C(=O)N=C1N)[C@H]2[C@H]([C@@H]([C@H](O2)CO)O)O",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.6446430087089539,
-      "ct_tox": 0.21308042109012604,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Dapagliflozin",
-      "smiles": "CCOC1=CC=C(C=C1)CC2=C(C=CC(=C2)[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O)Cl",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8117578029632568,
-      "ct_tox": 0.028437936678528786,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Dexrazoxane hydrochloride",
-      "smiles": "C[C@@H](CN1CC(=O)NC(=O)C1)N2CC(=O)NC(=O)C2",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.6773273944854736,
-      "ct_tox": 0.021874133497476578,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Dextroamphetamine sulfate",
-      "smiles": "C[C@@H](CC1=CC=CC=C1)N",
-      "dil_class": 2,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.700025737285614,
-      "ct_tox": 0.021083641797304153,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Diatrizoate sodium",
-      "smiles": "CC(=O)NC1=C(C(=C(C(=C1I)C(=O)[O-])I)NC(=O)C)I.[Na+]",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6501659154891968,
-      "ct_tox": 0.0032818971667438745,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Dimenhydrinate",
-      "smiles": "CN1C2=C(C(=O)N(C1=O)C)NC(=N2)Cl.CN(C)CCOC(C1=CC=CC=C1)C2=CC=CC=C2",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8457292914390564,
-      "ct_tox": 0.023646917194128036,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Divalproex sodium",
-      "smiles": "CCCC(CCC)C(=O)O.CCCC(CCC)C(=O)[O-].[Na+]",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.5650545954704285,
-      "ct_tox": 0.01807437092065811,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Dobutamine hydrochloride",
-      "smiles": "CC(CCC1=CC=C(C=C1)O)NCCC2=CC(=C(C=C2)O)O.Cl",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.7211512923240662,
-      "ct_tox": 0.02992294915020466,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Dofetilide",
-      "smiles": "CN(CCC1=CC=C(C=C1)NS(=O)(=O)C)CCOC2=CC=C(C=C2)NS(=O)(=O)C",
-      "dil_class": 1,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.3657643496990204,
-      "ct_tox": 0.15579631924629211,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Droperidol",
-      "smiles": "C1CN(CC=C1N2C3=CC=CC=C3NC2=O)CCCC(=O)C4=CC=C(C=C4)F",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.7489587068557739,
-      "ct_tox": 0.02478497102856636,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Dutasteride",
-      "smiles": "C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2C(=O)NC4=C(C=CC(=C4)C(F)(F)F)C(F)(F)F)CC[C@@H]5[C@@]3(C=CC(=O)N5)C",
-      "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6759319305419922,
-      "ct_tox": 0.24386854469776154,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Enalapril maleate",
-      "smiles": "CCOC(=O)[C@H](CCC1=CC=CC=C1)N[C@@H](C)C(=O)N2CCC[C@H]2C(=O)O.C(=C\\C(=O)O)\\C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.7250500917434692,
-      "ct_tox": 0.015131126157939434,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Enasidenib mesylate",
-      "smiles": "CC(C)(CNC1=NC(=NC(=N1)C2=NC(=CC=C2)C(F)(F)F)NC3=CC(=NC=C3)C(F)(F)F)O.CS(=O)(=O)O",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8046408891677856,
-      "ct_tox": 0.16396689414978027,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Encorafenib",
-      "smiles": "C[C@@H](CNC1=NC=CC(=N1)C2=CN(N=C2C3=C(C(=CC(=C3)Cl)NS(=O)(=O)C)F)C(C)C)NC(=O)OC",
-      "dil_class": 2,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3536554276943207,
-      "ct_tox": 0.09920921921730042,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Entacapone",
-      "smiles": "CCN(CC)C(=O)/C(=C/C1=CC(=C(C(=C1)O)O)[N+](=O)[O-])/C#N",
-      "dil_class": 3,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.7952331900596619,
-      "ct_tox": 0.0867994949221611,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Eptifibatide",
-      "smiles": "C1C[C@H]2C(=O)N[C@@H](CSSCCC(=O)N[C@H](C(=O)NCC(=O)N[C@H](C(=O)N[C@H](C(=O)N2C1)CC3=CNC4=CC=CC=C43)CC(=O)O)CCCCN=C(N)N)C(=O)N",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.7427589893341064,
-      "ct_tox": 0.011370968073606491,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ergocalciferol",
-      "smiles": "C[C@H](/C=C/[C@H](C)C(C)C)[C@H]1CC[C@@H]\\2[C@@]1(CCC/C2=C\\C=C/3\\C[C@H](CCC3=C)O)C",
-      "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5290279984474182,
-      "ct_tox": 0.04639999568462372,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Eszopiclone",
-      "smiles": "CN1CCN(CC1)C(=O)O[C@H]2C3=NC=CN=C3C(=O)N2C4=NC=C(C=C4)Cl",
-      "dil_class": 3,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5331386923789978,
-      "ct_tox": 0.06924527138471603,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ethanolamine oleate",
-      "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)O.C(CO)N",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5986761450767517,
-      "ct_tox": 0.003906691446900368,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ethosuximide",
-      "smiles": "CCC1(CC(=O)NC1=O)C",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4201081693172455,
-      "ct_tox": 0.015584299340844154,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Etidronate disodium",
-      "smiles": "CC(O)(P(=O)(O)[O-])P(=O)(O)[O-].[Na+].[Na+]",
-      "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8353957533836365,
-      "ct_tox": 0.00938284769654274,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Etodolac",
-      "smiles": "CCC1=C2C(=CC=C1)C3=C(N2)C(OCC3)(CC)CC(=O)O",
-      "dil_class": 2,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.5572704076766968,
-      "ct_tox": 0.12376170605421066,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Exemestane",
-      "smiles": "C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CC(=C)C4=CC(=O)C=C[C@]34C",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.7099707722663879,
-      "ct_tox": 0.1736713945865631,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Exenatide synthetic",
-      "smiles": "CC[C@H](C)[C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CC1=CNC2=CC=CC=C21)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CC(=O)N)C(=O)NCC(=O)NCC(=O)N3CCC[C@H]3C(=O)N[C@@H](CO)C(=O)N[C@@H](CO)C(=O)NCC(=O)N[C@@H](C)C(=O)N4CCC[C@H]4C(=O)N5CCC[C@H]5C(=O)N6CCC[C@H]6C(=O)N[C@@H](CO)C(=O)N)NC(=O)[C@H](CC7=CC=CC=C7)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](C(C)C)NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCSC)NC(=O)[C@H](CCC(=O)N)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CO)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CC8=CC=CC=C8)NC(=O)[C@H]([C@@H](C)O)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)CNC(=O)[C@H](CC9=CNC=N9)N",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6209467053413391,
-      "ct_tox": 0.004732066765427589,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Falnidamol",
-      "smiles": "CN1CCC(CC1)NC2=NC=C3C(=N2)C(=NC=N3)NC4=CC(=C(C=C4)F)Cl",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.8251609802246094,
-      "ct_tox": 0.13147561252117157,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Fidaxomicin",
-      "smiles": "CC[C@H]1/C=C(/[C@H](C/C=C/C=C(/C(=O)O[C@@H](C/C=C(/C=C(/[C@@H]1O[C@H]2[C@H]([C@H]([C@@H](C(O2)(C)C)OC(=O)C(C)C)O)O)\\C)\\C)[C@@H](C)O)\\CO[C@H]3[C@H]([C@H]([C@@H]([C@H](O3)C)OC(=O)C4=C(C(=C(C(=C4O)Cl)O)Cl)CC)O)OC)O)\\C",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3276057541370392,
-      "ct_tox": 0.03715161234140396,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Fluciclovine f-18",
-      "smiles": "C1C(CC1(C(=O)O)N)[18F]",
-      "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.48919668793678284,
-      "ct_tox": 0.08130088448524475,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Fluoxymesterone",
-      "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]3[C@@]2([C@H](C[C@]4([C@H]3CC[C@]4(C)O)C)O)F",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3689592778682709,
-      "ct_tox": 0.1169784665107727,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Flurbiprofen sodium",
-      "smiles": "CC(C1=CC(=C(C=C1)C2=CC=CC=C2)F)C(=O)[O-].[Na+]",
-      "dil_class": 3,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5456656217575073,
-      "ct_tox": 0.04172777011990547,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Fosamprenavir calcium",
-      "smiles": "CC(C)CN(C[C@H]([C@H](CC1=CC=CC=C1)NC(=O)O[C@H]2CCOC2)OP(=O)([O-])[O-])S(=O)(=O)C3=CC=C(C=C3)N.[Ca+2]",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.6454375386238098,
-      "ct_tox": 0.03744892030954361,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Fosaprepitant dimeglumine",
-      "smiles": "C[C@H](C1=CC(=CC(=C1)C(F)(F)F)C(F)(F)F)O[C@@H]2[C@@H](N(CCO2)CC3=NN(C(=O)N3)P(=O)(O)O)C4=CC=C(C=C4)F.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4551311135292053,
-      "ct_tox": 0.057560939341783524,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Gadobenate dimeglumine",
-      "smiles": "CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.C1=CC=C(C=C1)COCC(C(=O)[O-])N(CCN(CCN(CC(=O)O)CC(=O)[O-])CC(=O)[O-])CC(=O)O.[Gd+3]",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.9299314022064209,
-      "ct_tox": 0.002081225160509348,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Gadopentetate dimeglumine",
-      "smiles": "CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.C(CN(CC(=O)O)CC(=O)[O-])N(CCN(CC(=O)O)CC(=O)[O-])CC(=O)[O-].[Gd+3]",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.9245614409446716,
-      "ct_tox": 0.0037556954193860292,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Gadoterate meglumine",
-      "smiles": "CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.C1CN(CCN(CCN(CCN1CC(=O)O)CC(=O)[O-])CC(=O)[O-])CC(=O)[O-].[Gd+3]",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.9280739426612854,
-      "ct_tox": 0.002996050287038088,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Gemfibrozil",
-      "smiles": "CC1=CC(=C(C=C1)C)OCCCC(C)(C)C(=O)O",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.9360589981079102,
-      "ct_tox": 0.041135866194963455,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Haloperidol lactate",
-      "smiles": "CC(C(=O)O)O.C1CN(CCC1(C2=CC=C(C=C2)Cl)O)CCCC(=O)C3=CC=C(C=C3)F",
-      "dil_class": 1,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.8506520390510559,
-      "ct_tox": 0.006330464035272598,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ibufenac",
-      "smiles": "CC(C)CC1=CC=C(C=C1)CC(=O)O",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.6001240015029907,
-      "ct_tox": 0.02994072064757347,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Indapamide",
-      "smiles": "CC1CC2=CC=CC=C2N1NC(=O)C3=CC(=C(C=C3)Cl)S(=O)(=O)N",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3905671238899231,
-      "ct_tox": 0.07675571739673615,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Indinavir sulfate",
-      "smiles": "CC(C)(C)NC(=O)[C@@H]1CN(CCN1C[C@H](C[C@@H](CC2=CC=CC=C2)C(=O)N[C@@H]3[C@@H](CC4=CC=CC=C34)O)O)CC5=CN=CC=C5.OS(=O)(=O)O",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.35122111439704895,
-      "ct_tox": 0.03892134502530098,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Iodipamide sodium",
-      "smiles": "C1=C(C(=C(C(=C1I)NC(=O)CCCCC(=O)NC2=C(C=C(C(=C2I)C(=O)[O-])I)I)I)C(=O)[O-])I.[Na+].[Na+]",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5781626105308533,
-      "ct_tox": 0.006757322233170271,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Iproniazid",
-      "smiles": "CC(C)NNC(=O)C1=CC=NC=C1",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.7391566038131714,
-      "ct_tox": 0.07560399919748306,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Irbesartan",
-      "smiles": "CCCCC1=NC2(CCCC2)C(=O)N1CC3=CC=C(C=C3)C4=CC=CC=C4C5=NNN=N5",
-      "dil_class": 2,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.7688075304031372,
-      "ct_tox": 0.010180914774537086,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Isosorbide mononitrate",
-      "smiles": "C1[C@@H]([C@@H]2[C@H](O1)[C@@H](CO2)O[N+](=O)[O-])O",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8231712579727173,
-      "ct_tox": 0.009037096984684467,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Isoxsuprine hydrochloride",
-      "smiles": "CC(COC1=CC=CC=C1)NC(C)C(C2=CC=C(C=C2)O)O.Cl",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.7780755162239075,
-      "ct_tox": 0.0509008914232254,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Isradipine",
-      "smiles": "CC1=C(C(C(=C(N1)C)C(=O)OC(C)C)C2=CC=CC3=NON=C32)C(=O)OC",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5002136826515198,
-      "ct_tox": 0.02662317454814911,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ixazomib citrate",
-      "smiles": "B1(OC(=O)C(O1)(CC(=O)O)CC(=O)O)[C@H](CC(C)C)NC(=O)CNC(=O)C2=C(C=CC(=C2)Cl)Cl",
-      "dil_class": 3,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.6012705564498901,
-      "ct_tox": 0.021241266280412674,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Lamivudine",
-      "smiles": "C1[C@H](O[C@H](S1)CO)N2C=CC(=NC2=O)N",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6548177003860474,
-      "ct_tox": 0.13008330762386322,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Lamotrigine",
-      "smiles": "C1=CC(=C(C(=C1)Cl)Cl)C2=C(N=C(N=N2)N)N",
-      "dil_class": 2,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.49883216619491577,
-      "ct_tox": 0.15895843505859375,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Lefamulin acetate",
-      "smiles": "C[C@@H]1CC[C@@]23CCC(=O)[C@H]2[C@@]1([C@@H](C[C@@]([C@H]([C@@H]3C)O)(C)C=C)OC(=O)CS[C@@H]4CC[C@H](C[C@H]4O)N)C.CC(=O)O",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.6000275015830994,
-      "ct_tox": 0.036923933774232864,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Leucovorin calcium",
-      "smiles": "C1C(N(C2=C(N1)N=C(NC2=O)N)C=O)CNC3=CC=C(C=C3)C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-].[Ca+2]",
-      "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6138222813606262,
-      "ct_tox": 0.014726994559168816,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Levetiracetam",
-      "smiles": "CC[C@@H](C(=O)N)N1CCCC1=O",
-      "dil_class": 1,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.495472252368927,
-      "ct_tox": 0.03238680958747864,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Levocarnitine",
-      "smiles": "C[N+](C)(C)C[C@@H](CC(=O)[O-])O",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.9651840925216675,
-      "ct_tox": 0.001333434134721756,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Levonorgestrel",
-      "smiles": "CC[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@]2(C#C)O)CCC4=CC(=O)CC[C@H]34",
-      "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8453053832054138,
-      "ct_tox": 0.08048318326473236,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Levorphanol tartrate",
-      "smiles": "CN1CC[C@]23CCCC[C@H]2[C@H]1CC4=C3C=C(C=C4)O.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.9289949536323547,
-      "ct_tox": 0.002666041487827897,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Linaclotide",
-      "smiles": "C[C@H]1C(=O)N[C@H]2CSSC[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@@H](CSSC[C@H](NC(=O)CNC(=O)[C@@H](NC2=O)[C@@H](C)O)C(=O)N[C@@H](CC4=CC=C(C=C4)O)C(=O)O)C(=O)N[C@@H](CSSC[C@@H](C(=O)N3)N)C(=O)N[C@H](C(=O)N5CCC[C@H]5C(=O)N1)CC(=O)N)CC6=CC=C(C=C6)O)CCC(=O)O",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6251013875007629,
-      "ct_tox": 0.011668414808809757,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Liraglutide",
-      "smiles": "CCCCCCCCCCCCCCCC(=O)N[C@@H](CCC(=O)NCCCC[C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H]([C@@H](C)CC)C(=O)N[C@@H](C)C(=O)N[C@@H](CC2=CNC3=CC=CC=C32)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)N)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC4=CC=C(C=C4)O)NC(=O)[C@H](CO)NC(=O)[C@H](CO)NC(=O)[C@H](C(C)C)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CC5=CC=CC=C5)NC(=O)[C@H]([C@@H](C)O)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](CC6=CN=CN6)N)C(=O)O",
-      "dil_class": 1,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6216684579849243,
-      "ct_tox": 0.006693120114505291,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Lisinopril",
-      "smiles": "C1C[C@H](N(C1)C(=O)[C@H](CCCCN)N[C@@H](CCC2=CC=CC=C2)C(=O)O)C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5994957685470581,
-      "ct_tox": 0.028259223327040672,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Lomitapide mesylate",
-      "smiles": "CS(=O)(=O)O.C1CN(CCC1NC(=O)C2=CC=CC=C2C3=CC=C(C=C3)C(F)(F)F)CCCCC4(C5=CC=CC=C5C6=CC=CC=C64)C(=O)NCC(F)(F)F",
-      "dil_class": 2,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.5816768407821655,
-      "ct_tox": 0.02357693947851658,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Loratadine",
-      "smiles": "CCOC(=O)N1CCC(=C2C3=C(CCC4=C2N=CC=C4)C=C(C=C3)Cl)CC1",
-      "dil_class": 2,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6878032684326172,
-      "ct_tox": 0.053838152438402176,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Losartan potassium",
-      "smiles": "CCCCC1=NC(=C(N1CC2=CC=C(C=C2)C3=CC=CC=C3C4=NN=N[N-]4)CO)Cl.[K+]",
-      "dil_class": 2,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.8142167329788208,
-      "ct_tox": 0.04103446751832962,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Lutetium lu 177 dotatate",
-      "smiles": "C[C@H]([C@H]1C(=O)N[C@@H](CSSC[C@@H](C(=O)N[C@H](C(=O)N[C@@H](C(=O)N[C@H](C(=O)N1)CCCCN)CC2=CNC3=CC=CC=C32)CC4=CC=C(C=C4)O)NC(=O)[C@@H](CC5=CC=CC=C5)NC(=O)CN6CCN(CCN(CCN(CC6)CC(=O)[O-])CC(=O)[O-])CC(=O)[O-])C(=O)N[C@@H]([C@@H](C)O)C(=O)O)O.[177Lu+3]",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8213125467300415,
-      "ct_tox": 0.005603650584816933,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Maprotiline hydrochloride",
-      "smiles": "CNCCCC12CCC(C3=CC=CC=C31)C4=CC=CC=C24",
-      "dil_class": 2,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8275209665298462,
-      "ct_tox": 0.021282410249114037,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Mechlorethamine hydrochloride",
-      "smiles": "CN(CCCl)CCCl",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.419776976108551,
-      "ct_tox": 0.06426732987165451,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Meclizine hydrochloride",
-      "smiles": "CC1=CC(=CC=C1)CN2CCN(CC2)C(C3=CC=CC=C3)C4=CC=C(C=C4)Cl.O.Cl.Cl",
-      "dil_class": 2,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6958295106887817,
-      "ct_tox": 0.04096076264977455,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Meclofenamate sodium",
-      "smiles": "CC1=C(C(=C(C=C1)Cl)NC2=CC=CC=C2C(=O)[O-])Cl.[Na+]",
-      "dil_class": 3,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8102728128433228,
-      "ct_tox": 0.15992200374603271,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Mercaptopurine",
-      "smiles": "C1=NC2=C(N1)C(=S)N=CN2",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.6790485978126526,
-      "ct_tox": 0.26034215092658997,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Meropenem",
-      "smiles": "C[C@@H]1[C@@H]2[C@H](C(=O)N2C(=C1S[C@H]3C[C@H](NC3)C(=O)N(C)C)C(=O)O)[C@@H](C)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5076540112495422,
-      "ct_tox": 0.03663187101483345,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Methotrexate sodium",
-      "smiles": "CN(CC1=CN=C2C(=N1)C(=NC(=N2)N)N)C3=CC=C(C=C3)C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-].[Na+].[Na+]",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.560417652130127,
-      "ct_tox": 0.012928356416523457,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Migalastat hydrochloride",
-      "smiles": "C1[C@@H]([C@H]([C@H]([C@H](N1)CO)O)O)O.Cl",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.35980188846588135,
-      "ct_tox": 0.04446233808994293,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Miglustat",
-      "smiles": "CCCCN1C[C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.836644172668457,
-      "ct_tox": 0.01580948568880558,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Mirabegron",
-      "smiles": "C1=CC=C(C=C1)[C@H](CNCCC2=CC=C(C=C2)NC(=O)CC3=CSC(=N3)N)O",
-      "dil_class": 3,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.504748523235321,
-      "ct_tox": 0.08204587548971176,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Mitomycin",
-      "smiles": "CC1=C(C(=O)C2=C(C1=O)N3C[C@H]4[C@@H]([C@@]3([C@@H]2COC(=O)N)OC)N4)N",
-      "dil_class": 2,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.47245630621910095,
-      "ct_tox": 0.0430309884250164,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Montelukast sodium",
-      "smiles": "CC(C)(C1=CC=CC=C1CC[C@H](C2=CC=CC(=C2)/C=C/C3=NC4=C(C=CC(=C4)Cl)C=C3)SCC5(CC5)CC(=O)[O-])O.[Na+]",
-      "dil_class": 1,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.9153276085853577,
-      "ct_tox": 0.0015638764016330242,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Mycophenolate mofetil",
-      "smiles": "CC1=C2COC(=O)C2=C(C(=C1OC)C/C=C(\\C)/CCC(=O)OCCN3CCOCC3)O",
-      "dil_class": 1,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6057925820350647,
-      "ct_tox": 0.016001246869564056,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Mycophenolic sodium",
-      "smiles": "CC1=C2COC(=O)C2=C(C(=C1OC)C/C=C(\\C)/CCC(=O)[O-])O.[Na+]",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.43923860788345337,
-      "ct_tox": 0.01318196952342987,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Nabumetone",
-      "smiles": "CC(=O)CCC1=CC2=C(C=C1)C=C(C=C2)OC",
-      "dil_class": 3,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3665101230144501,
-      "ct_tox": 0.1808340698480606,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Nadolol",
-      "smiles": "CC(C)(C)NCC(COC1=CC=CC2=C1C[C@@H]([C@@H](C2)O)O)O",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.784016489982605,
-      "ct_tox": 0.017941635102033615,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Naldemedine tosylate",
-      "smiles": "CC1=CC=C(C=C1)S(=O)(=O)O.CC(C)(C1=NC(=NO1)C2=CC=CC=C2)NC(=O)C3=C([C@H]4[C@@]56CCN([C@@H]([C@@]5(C3)O)CC7=C6C(=C(C=C7)O)O4)CC8CC8)O",
-      "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5466742515563965,
-      "ct_tox": 0.14966930449008942,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Niacin",
-      "smiles": "C1=CC(=CN=C1)C(=O)O",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.9140998125076294,
-      "ct_tox": 0.09844949096441269,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Nifedipine",
-      "smiles": "CC1=C(C(C(=C(N1)C)C(=O)OC)C2=CC=CC=C2[N+](=O)[O-])C(=O)OC",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6397109031677246,
-      "ct_tox": 0.021650055423378944,
-      "tx_flags": 0
+      "tx_flags": 0,
+      "tox_risk": 0.0624406099319458,
+      "tier": "B"
     },
     {
       "drug": "Nilutamide",
@@ -1060,142 +582,20 @@
       "dili_concern": "vMost-DILI-concern",
       "dil_prob": 0.4093441069126129,
       "ct_tox": 0.22515448927879333,
-      "tx_flags": 0
+      "tx_flags": 0,
+      "tox_risk": 0.067546346783638,
+      "tier": "B"
     },
     {
-      "drug": "Niperotidine",
-      "smiles": "CN(C)CC1=CC=C(O1)CSCCNC(=C[N+](=O)[O-])NCC2=CC3=C(C=C2)OCO3",
-      "dil_class": 2,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.8288818001747131,
-      "ct_tox": 0.002889759838581085,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Norepinephrine bitartrate",
-      "smiles": "C1=CC(=C(C=C1[C@H](CN)O)O)O.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O.O",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8744233250617981,
-      "ct_tox": 0.0033414200879633427,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Nortriptyline hydrochloride",
-      "smiles": "CNCCC=C1C2=CC=CC=C2CCC3=CC=CC=C31.Cl",
-      "dil_class": 2,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.9335811734199524,
-      "ct_tox": 0.005020151846110821,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Nystatin",
-      "smiles": "C[C@H]1/C=C/C=C/CC/C=C/C=C/C=C/C=C/C(CC2C(C(C[C@](O2)(CC(C(CCC(CC(CC(CC(=O)O[C@H]([C@@H]([C@@H]1O)C)C)O)O)O)O)O)O)O)C(=O)O)O[C@@H]3[C@H]([C@H]([C@@H]([C@H](O3)C)O)N)O",
-      "dil_class": 2,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5626242756843567,
-      "ct_tox": 0.0038935537450015545,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Olsalazine sodium",
-      "smiles": "C1=CC(=C(C=C1N=NC2=CC(=C(C=C2)[O-])C(=O)O)C(=O)O)[O-].[Na+].[Na+]",
-      "dil_class": 3,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.8947184085845947,
-      "ct_tox": 0.10420798510313034,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Omadacycline tosylate",
-      "smiles": "CC1=CC=C(C=C1)S(=O)(=O)O.CC(C)(C)CNCC1=CC(=C2C[C@H]3C[C@H]4[C@@H](C(=O)C(=C([C@]4(C(=O)C3=C(C2=C1O)O)O)O)C(=O)N)N(C)C)N(C)C",
-      "dil_class": 3,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8558720946311951,
-      "ct_tox": 0.06573421508073807,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Oxazepam",
-      "smiles": "C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O",
-      "dil_class": 3,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.6816830039024353,
-      "ct_tox": 0.15983222424983978,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Pancuronium bromide",
-      "smiles": "CC(=O)O[C@H]1C[C@@H]2CC[C@@H]3[C@@H]([C@]2(C[C@@H]1[N+]4(CCCCC4)C)C)CC[C@]5([C@H]3C[C@@H]([C@@H]5OC(=O)C)[N+]6(CCCCC6)C)C.[Br-].[Br-]",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.9530789256095886,
-      "ct_tox": 0.0005138859851285815,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Panobinostat lactate",
-      "smiles": "CC1=C(C2=CC=CC=C2N1)CCNCC3=CC=C(C=C3)/C=C/C(=O)NO.CC(C(=O)O)O",
+      "drug": "Acyclovir",
+      "smiles": "C1=NC2=C(N1COCCO)N=C(NC2=O)N",
       "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4876661002635956,
-      "ct_tox": 0.024520771577954292,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Penicillin g benzathine",
-      "smiles": "CC1([C@@H](N2[C@H](S1)[C@@H](C2=O)NC(=O)CC3=CC=CC=C3)C(=O)O)C.CC1([C@@H](N2[C@H](S1)[C@@H](C2=O)NC(=O)CC3=CC=CC=C3)C(=O)O)C.C1=CC=C(C=C1)CNCCNCC2=CC=CC=C2.O.O.O.O",
-      "dil_class": 2,
       "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.946851909160614,
-      "ct_tox": 0.008391107432544231,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Pergolide mesylate",
-      "smiles": "CCCN1C[C@@H](C[C@H]2[C@H]1CC3=CNC4=CC=CC2=C34)CSC.CS(=O)(=O)O",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.7985524535179138,
-      "ct_tox": 0.013008056208491325,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Phenelzine sulfate",
-      "smiles": "C1=CC=C(C=C1)CCNN.OS(=O)(=O)O",
-      "dil_class": 2,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5539209246635437,
-      "ct_tox": 0.015894975513219833,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Phenytoin",
-      "smiles": "C1=CC=C(C=C1)C2(C(=O)NC(=O)N2)C3=CC=CC=C3",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.7575900554656982,
-      "ct_tox": 0.10211747139692307,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Pimozide",
-      "smiles": "C1CN(CCC1N2C3=CC=CC=C3NC2=O)CCCC(C4=CC=C(C=C4)F)C5=CC=C(C=C5)F",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.7897960543632507,
-      "ct_tox": 0.04280791059136391,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Pipamazine",
-      "smiles": "C1CN(CCC1C(=O)N)CCCN2C3=CC=CC=C3SC4=C2C=C(C=C4)Cl",
-      "dil_class": 2,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.5118454694747925,
-      "ct_tox": 0.13123267889022827,
-      "tx_flags": 0
+      "dil_prob": 0.6861659288406372,
+      "ct_tox": 0.23365002870559692,
+      "tx_flags": 0,
+      "tox_risk": 0.07009500861167907,
+      "tier": "B"
     },
     {
       "drug": "Ponatinib hydrochloride",
@@ -1204,214 +604,53 @@
       "dili_concern": "Ambiguous-DILI-concern",
       "dil_prob": 0.43404361605644226,
       "ct_tox": 0.24272064864635468,
-      "tx_flags": 0
+      "tx_flags": 0,
+      "tox_risk": 0.0728161945939064,
+      "tier": "B"
     },
     {
-      "drug": "Ponesimod",
-      "smiles": "CCCN=C1N(C(=O)/C(=C/C2=CC(=C(C=C2)OC[C@@H](CO)O)Cl)/S1)C3=CC=CC=C3C",
-      "dil_class": 1,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.46874573826789856,
-      "ct_tox": 0.056927841156721115,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Posaconazole",
-      "smiles": "CC[C@@H]([C@H](C)O)N1C(=O)N(C=N1)C2=CC=C(C=C2)N3CCN(CC3)C4=CC=C(C=C4)OC[C@H]5C[C@](OC5)(CN6C=NC=N6)C7=C(C=C(C=C7)F)F",
-      "dil_class": 2,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.4229561686515808,
-      "ct_tox": 0.10189711302518845,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Pralidoxime chloride",
-      "smiles": "C[N+]1=CC=CC=C1/C=N/O.[Cl-]",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4729780852794647,
-      "ct_tox": 0.06459704786539078,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Praziquantel",
-      "smiles": "C1CCC(CC1)C(=O)N2CC3C4=CC=CC=C4CCN3C(=O)C2",
-      "dil_class": 2,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8894831538200378,
-      "ct_tox": 0.03453045338392258,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Prazosin hydrochloride",
-      "smiles": "COC1=C(C=C2C(=C1)C(=NC(=N2)N3CCN(CC3)C(=O)C4=CC=CO4)N)OC",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3763389587402344,
-      "ct_tox": 0.10148128867149353,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Prednisolone",
-      "smiles": "C[C@]12C[C@@H]([C@H]3[C@H]([C@@H]1CC[C@@]2(C(=O)CO)O)CCC4=CC(=O)C=C[C@]34C)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5420123338699341,
-      "ct_tox": 0.14421312510967255,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Prednisone",
-      "smiles": "C[C@]12CC(=O)[C@H]3[C@H]([C@@H]1CC[C@@]2(C(=O)CO)O)CCC4=CC(=O)C=C[C@]34C",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5687192678451538,
-      "ct_tox": 0.149332657456398,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Pretomanid",
-      "smiles": "C1[C@@H](COC2=NC(=CN21)[N+](=O)[O-])OCC3=CC=C(C=C3)OC(F)(F)F",
-      "dil_class": 2,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.490179181098938,
-      "ct_tox": 0.14317598938941956,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Primidone",
-      "smiles": "CCC1(C(=O)NCNC1=O)C2=CC=CC=C2",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8687542080879211,
-      "ct_tox": 0.029610589146614075,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Propantheline bromide",
-      "smiles": "CC(C)[N+](C)(CCOC(=O)C1C2=CC=CC=C2OC3=CC=CC=C13)C(C)C.[Br-]",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.44557440280914307,
-      "ct_tox": 0.004105470143258572,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Protirelin",
-      "smiles": "C1C[C@H](N(C1)C(=O)[C@H](CC2=CN=CN2)NC(=O)[C@@H]3CCC(=O)N3)C(=O)N",
+      "drug": "Dutasteride",
+      "smiles": "C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2C(=O)NC4=C(C=CC(=C4)C(F)(F)F)C(F)(F)F)CC[C@@H]5[C@@]3(C=CC(=O)N5)C",
       "dil_class": 0,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6061066389083862,
-      "ct_tox": 0.13384544849395752,
-      "tx_flags": 0
+      "dil_prob": 0.6759319305419922,
+      "ct_tox": 0.24386854469776154,
+      "tx_flags": 0,
+      "tox_risk": 0.07316056340932846,
+      "tier": "B"
     },
     {
-      "drug": "Prucalopride succinate",
-      "smiles": "COCCCN1CCC(CC1)NC(=O)C2=CC(=C(C3=C2OCC3)N)Cl.C(CC(=O)O)C(=O)O",
+      "drug": "Avapritinib",
+      "smiles": "C[C@](C1=CC=C(C=C1)F)(C2=CN=C(N=C2)N3CCN(CC3)C4=NC=NN5C4=CC(=C5)C6=CN(N=C6)C)N",
       "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6011521220207214,
-      "ct_tox": 0.039546817541122437,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Pyrimethamine",
-      "smiles": "CCC1=C(C(=NC(=N1)N)N)C2=CC=C(C=C2)Cl",
-      "dil_class": 2,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5341315865516663,
-      "ct_tox": 0.10264603793621063,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Quinine sulfate",
-      "smiles": "COC1=CC2=C(C=CN=C2C=C1)[C@H]([C@@H]3C[C@@H]4CCN3C[C@@H]4C=C)O.COC1=CC2=C(C=CN=C2C=C1)[C@H]([C@@H]3C[C@@H]4CCN3C[C@@H]4C=C)O.OS(=O)(=O)O",
-      "dil_class": 1,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.49090951681137085,
-      "ct_tox": 0.10129358619451523,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ramipril",
-      "smiles": "CCOC(=O)[C@H](CCC1=CC=CC=C1)N[C@@H](C)C(=O)N2[C@H]3CCC[C@H]3C[C@H]2C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5918236374855042,
-      "ct_tox": 0.02948438934981823,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Repaglinide",
-      "smiles": "CCOC1=C(C=CC(=C1)CC(=O)N[C@@H](CC(C)C)C2=CC=CC=C2N3CCCCC3)C(=O)O",
-      "dil_class": 2,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6563053131103516,
-      "ct_tox": 0.07280516624450684,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ribociclib succinate",
-      "smiles": "CN(C)C(=O)C1=CC2=CN=C(N=C2N1C3CCCC3)NC4=NC=C(C=C4)N5CCNCC5.C(CC(=O)O)C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.4130713641643524,
-      "ct_tox": 0.05314118415117264,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Rifapentine",
-      "smiles": "C[C@H]1/C=C/C=C(\\C(=O)NC2=C(C(=C3C(=C2O)C(=C(C4=C3C(=O)[C@](O4)(O/C=C/[C@@H]([C@H]([C@H]([C@@H]([C@@H]([C@@H]([C@H]1O)C)O)C)OC(=O)C)C)OC)C)C)O)O)/C=N/N5CCN(CC5)C6CCCC6)/C",
-      "dil_class": 3,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.7130447626113892,
-      "ct_tox": 0.056428588926792145,
-      "tx_flags": 0
+      "dil_prob": 0.3711267113685608,
+      "ct_tox": 0.24735046923160553,
+      "tx_flags": 0,
+      "tox_risk": 0.07420514076948166,
+      "tier": "B"
     },
     {
-      "drug": "Rifaximin",
-      "smiles": "C[C@H]1/C=C/C=C(\\C(=O)NC2=C(C3=C(C4=C(C(=C3O)C)O[C@@](C4=O)(O/C=C/[C@@H]([C@H]([C@H]([C@@H]([C@@H]([C@@H]([C@H]1O)C)O)C)OC(=O)C)C)OC)C)C5=C2N6C=CC(=CC6=N5)C)O)/C",
-      "dil_class": 3,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.7274388074874878,
-      "ct_tox": 0.053869690746068954,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Rilpivirine hydrochloride",
-      "smiles": "CC1=CC(=CC(=C1NC2=NC(=NC=C2)NC3=CC=C(C=C3)C#N)C)/C=C/C#N.Cl",
-      "dil_class": 3,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.8882910013198853,
-      "ct_tox": 0.09712984412908554,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Rosiglitazone maleate",
-      "smiles": "CN(CCOC1=CC=C(C=C1)CC2C(=O)NC(=O)S2)C3=CC=CC=N3.C(=C\\C(=O)O)\\C(=O)O",
+      "drug": "Capmatinib hydrochloride",
+      "smiles": "CNC(=O)C1=C(C=C(C=C1)C2=NN3C(=CN=C3N=C2)CC4=CC5=C(C=C4)N=CC=C5)F.O.Cl.Cl",
       "dil_class": 0,
       "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.851057231426239,
-      "ct_tox": 0.04286929592490196,
-      "tx_flags": 0
+      "dil_prob": 0.35962745547294617,
+      "ct_tox": 0.2741174101829529,
+      "tx_flags": 0,
+      "tox_risk": 0.08223522305488586,
+      "tier": "B"
     },
     {
-      "drug": "Semaglutide",
-      "smiles": "CC[C@H](C)[C@@H](C(=O)N[C@@H](C)C(=O)N[C@@H](CC1=CNC2=CC=CC=C21)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)O)NC(=O)[C@H](CC3=CC=CC=C3)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCCCNC(=O)COCCOCCNC(=O)COCCOCCNC(=O)CC[C@H](C(=O)O)NC(=O)CCCCCCCCCCCCCCCCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)N)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC4=CC=C(C=C4)O)NC(=O)[C@H](CO)NC(=O)[C@H](CO)NC(=O)[C@H](C(C)C)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CC5=CC=CC=C5)NC(=O)[C@H]([C@@H](C)O)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)C(C)(C)NC(=O)[C@H](CC6=CN=CN6)N",
-      "dil_class": 1,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6970468759536743,
-      "ct_tox": 0.004667217843234539,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Sodium fluoride f-18",
-      "smiles": "[18F-].[Na+]",
+      "drug": "Pancuronium bromide",
+      "smiles": "CC(=O)O[C@H]1C[C@@H]2CC[C@@H]3[C@@H]([C@]2(C[C@@H]1[N+]4(CCCCC4)C)C)CC[C@]5([C@H]3C[C@@H]([C@@H]5OC(=O)C)[N+]6(CCCCC6)C)C.[Br-].[Br-]",
       "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.4927171468734741,
-      "ct_tox": 0.11915203183889389,
-      "tx_flags": 0
+      "dil_prob": 0.9530789256095886,
+      "ct_tox": 0.0005138859851285815,
+      "tx_flags": 0,
+      "tox_risk": 0.16682083246220522,
+      "tier": "A"
     },
     {
       "drug": "Sodium lactate",
@@ -1420,115 +659,130 @@
       "dili_concern": "vNo-DILI-concern",
       "dil_prob": 0.8099698424339294,
       "ct_tox": 0.0007911183056421578,
-      "tx_flags": 0
+      "tx_flags": 0,
+      "tox_risk": 0.1669040021583593,
+      "tier": "A"
     },
     {
-      "drug": "Sodium nitroprusside",
-      "smiles": "[C-]#N.[C-]#N.[C-]#N.[C-]#N.[C-]#N.N#[O+].[Na+].[Na+].[Fe+2]",
+      "drug": "Levocarnitine",
+      "smiles": "C[N+](C)(C)C[C@@H](CC(=O)[O-])O",
       "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.3417574465274811,
-      "ct_tox": 0.07554420828819275,
-      "tx_flags": 0
+      "dil_prob": 0.9651840925216675,
+      "ct_tox": 0.001333434134721756,
+      "tx_flags": 0,
+      "tox_risk": 0.16706669690708317,
+      "tier": "A"
     },
     {
-      "drug": "Sodium thiosulfate",
-      "smiles": "[O-]S(=O)(=S)[O-].[Na+].[Na+]",
-      "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6995341777801514,
-      "ct_tox": 0.010230490006506443,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Sterile water",
-      "smiles": "O",
-      "dil_class": 1,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.45708590745925903,
-      "ct_tox": 0.12072741240262985,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Streptomycin sulfate",
-      "smiles": "C[C@H]1[C@@]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H]([C@H]([C@@H]([C@H]2O)O)N=C(N)N)O)N=C(N)N)O[C@H]3[C@H]([C@@H]([C@H]([C@@H](O3)CO)O)O)NC)(C=O)O",
-      "dil_class": 0,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5170691609382629,
-      "ct_tox": 0.12298136204481125,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Succimer",
-      "smiles": "[C@@H]([C@@H](C(=O)O)S)(C(=O)O)S",
+      "drug": "Montelukast sodium",
+      "smiles": "CC(C)(C1=CC=CC=C1CC[C@H](C2=CC=CC(=C2)/C=C/C3=NC4=C(C=CC(=C4)Cl)C=C3)SCC5(CC5)CC(=O)[O-])O.[Na+]",
       "dil_class": 1,
       "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5165140628814697,
-      "ct_tox": 0.011407073587179184,
-      "tx_flags": 0
+      "dil_prob": 0.9153276085853577,
+      "ct_tox": 0.0015638764016330242,
+      "tx_flags": 0,
+      "tox_risk": 0.16713582958715656,
+      "tier": "A"
     },
     {
-      "drug": "Tafamidis meglumine",
-      "smiles": "CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.C1=CC2=C(C=C1C(=O)O)OC(=N2)C3=CC(=CC(=C3)Cl)Cl",
-      "dil_class": 3,
-      "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8122970461845398,
-      "ct_tox": 0.06548348814249039,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Telmisartan",
-      "smiles": "CCCC1=NC2=C(N1CC3=CC=C(C=C3)C4=CC=CC=C4C(=O)O)C=C(C=C2C)C5=NC6=CC=CC=C6N5C",
-      "dil_class": 2,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6043819189071655,
-      "ct_tox": 0.12622341513633728,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Terbinafine hydrochloride",
-      "smiles": "CC(C)(C)C#C/C=C/CN(C)CC1=CC=CC2=CC=CC=C21.Cl",
-      "dil_class": 2,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.7448809742927551,
-      "ct_tox": 0.04685133695602417,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Teriflunomide",
-      "smiles": "C/C(=C(\\C#N)/C(=O)NC1=CC=C(C=C1)C(F)(F)F)/O",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.5418464541435242,
-      "ct_tox": 0.10621987283229828,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Tetrabamate",
-      "smiles": "CCCCCOC(CN1C(=O)C(C(=O)N(C1=O)CC(COCCCC)OC(=O)N)(CC)C2=CC=CC=C2)OC(=O)N.CCCCOCC(CN1C(=O)C(C(=O)NC1=O)(CC)C2=CC=CC=C2)OC(=O)N.CCC1(C(=O)NC(=O)NC1=O)C2=CC=CC=C2",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.45725807547569275,
-      "ct_tox": 0.10703547298908234,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Tilbroquinol",
-      "smiles": "CC1=CC(=C(C2=C1C=CC=N2)O)Br",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.8765519857406616,
-      "ct_tox": 0.13462144136428833,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Tivozanib hydrochloride",
-      "smiles": "CC1=CC(=NO1)NC(=O)NC2=C(C=C(C=C2)OC3=C4C=C(C(=CC4=NC=C3)OC)OC)Cl.O.Cl",
-      "dil_class": 3,
+      "drug": "Cariprazine hydrochloride",
+      "smiles": "CN(C)C(=O)NC1CCC(CC1)CCN2CCN(CC2)C3=C(C(=CC=C3)Cl)Cl",
+      "dil_class": 1,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8780875205993652,
-      "ct_tox": 0.14221730828285217,
-      "tx_flags": 0
+      "dil_prob": 0.8500419855117798,
+      "ct_tox": 0.0015692748129367828,
+      "tx_flags": 0,
+      "tox_risk": 0.1671374491105477,
+      "tier": "A"
+    },
+    {
+      "drug": "Aprotinin",
+      "smiles": "CC[C@H](C)[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)NCC(=O)N[C@H](C(=O)N[C@H]2CSSC[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@@H](CSSC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N4CCC[C@H]4C(=O)N5CCC[C@H]5C(=O)N[C@H](C(=O)N[C@H](C(=O)NCC(=O)N6CCC[C@H]6C(=O)N[C@@H](CSSC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N3)CC(=O)O)CCC(=O)O)C)CO)CCCCN)CC7=CC=CC=C7)CC(=O)N)CC(=O)N)CCCNC(=N)N)CCCCN)C)CCCNC(=N)N)NC(=O)CNC(=O)CNC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC2=O)CCC(=O)N)[C@@H](C)O)CC8=CC=CC=C8)C(C)C)CC9=CC=C(C=C9)O)C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N1)CCCNC(=N)N)C)CCCCN)[C@@H](C)O)CC1=CC=C(C=C1)O)CCC(=O)O)CC(C)C)NC(=O)[C@H](CC1=CC=CC=C1)NC(=O)[C@H](CC(=O)O)NC(=O)[C@@H]1CCCN1C(=O)[C@H](CCCNC(=N)N)N)C(=O)NCC(=O)NCC(=O)N[C@@H](C)C(=O)O)[C@@H](C)O)CCCNC(=N)N)CCSC)CC(C)C)C)CCCCN)C)CC(=O)N)CC1=CC=C(C=C1)O)CC1=CC=CC=C1)CC1=CC=C(C=C1)O)CCCNC(=N)N)[C@@H](C)CC",
+      "dil_class": 1,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.8566942811012268,
+      "ct_tox": 0.0018700625514611602,
+      "tx_flags": 0,
+      "tox_risk": 0.167227685432105,
+      "tier": "A"
+    },
+    {
+      "drug": "Gadobenate dimeglumine",
+      "smiles": "CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.C1=CC=C(C=C1)COCC(C(=O)[O-])N(CCN(CCN(CC(=O)O)CC(=O)[O-])CC(=O)[O-])CC(=O)O.[Gd+3]",
+      "dil_class": 1,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.9299314022064209,
+      "ct_tox": 0.002081225160509348,
+      "tx_flags": 0,
+      "tox_risk": 0.16729103421481947,
+      "tier": "A"
+    },
+    {
+      "drug": "Levorphanol tartrate",
+      "smiles": "CN1CC[C@]23CCCC[C@H]2[C@H]1CC4=C3C=C(C=C4)O.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O",
+      "dil_class": 1,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.9289949536323547,
+      "ct_tox": 0.002666041487827897,
+      "tx_flags": 0,
+      "tox_risk": 0.16746647911301502,
+      "tier": "A"
+    },
+    {
+      "drug": "Gadoterate meglumine",
+      "smiles": "CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.C1CN(CCN(CCN(CCN1CC(=O)O)CC(=O)[O-])CC(=O)[O-])CC(=O)[O-].[Gd+3]",
+      "dil_class": 1,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.9280739426612854,
+      "ct_tox": 0.002996050287038088,
+      "tx_flags": 0,
+      "tox_risk": 0.16756548175277808,
+      "tier": "A"
+    },
+    {
+      "drug": "Diatrizoate sodium",
+      "smiles": "CC(=O)NC1=C(C(=C(C(=C1I)C(=O)[O-])I)NC(=O)C)I.[Na+]",
+      "dil_class": 1,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.6501659154891968,
+      "ct_tox": 0.0032818971667438745,
+      "tx_flags": 0,
+      "tox_risk": 0.1676512358166898,
+      "tier": "A"
+    },
+    {
+      "drug": "Norepinephrine bitartrate",
+      "smiles": "C1=CC(=C(C=C1[C@H](CN)O)O)O.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O.O",
+      "dil_class": 1,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.8744233250617981,
+      "ct_tox": 0.0033414200879633427,
+      "tx_flags": 0,
+      "tox_risk": 0.16766909269305566,
+      "tier": "A"
+    },
+    {
+      "drug": "Gadopentetate dimeglumine",
+      "smiles": "CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.C(CN(CC(=O)O)CC(=O)[O-])N(CCN(CC(=O)O)CC(=O)[O-])CC(=O)[O-].[Gd+3]",
+      "dil_class": 1,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.9245614409446716,
+      "ct_tox": 0.0037556954193860292,
+      "tx_flags": 0,
+      "tox_risk": 0.16779337529248248,
+      "tier": "A"
+    },
+    {
+      "drug": "Ethanolamine oleate",
+      "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)O.C(CO)N",
+      "dil_class": 1,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.5986761450767517,
+      "ct_tox": 0.003906691446900368,
+      "tx_flags": 0,
+      "tox_risk": 0.16783867410073677,
+      "tier": "B"
     },
     {
       "drug": "Tranylcypromine sulfate",
@@ -1537,576 +791,328 @@
       "dili_concern": "vLess-DILI-concern",
       "dil_prob": 0.9518065452575684,
       "ct_tox": 0.003968624863773584,
-      "tx_flags": 0
+      "tx_flags": 0,
+      "tox_risk": 0.16785725412579874,
+      "tier": "A"
     },
     {
-      "drug": "Trilaciclib dihydrochloride",
-      "smiles": "CN1CCN(CC1)C2=CN=C(C=C2)NC3=NC=C4C=C5C(=O)NCC6(N5C4=N3)CCCCC6.Cl.Cl",
-      "dil_class": 2,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4103614389896393,
-      "ct_tox": 0.1304827183485031,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Triptorelin pamoate",
-      "smiles": "CC(C)C[C@@H](C(=O)N[C@@H](CCCN=C(N)N)C(=O)N1CCC[C@H]1C(=O)NCC(=O)N)NC(=O)[C@@H](CC2=CNC3=CC=CC=C32)NC(=O)[C@H](CC4=CC=C(C=C4)O)NC(=O)[C@H](CO)NC(=O)[C@H](CC5=CNC6=CC=CC=C65)NC(=O)[C@H](CC7=CN=CN7)NC(=O)[C@@H]8CCC(=O)N8.C1=CC=C2C(=C1)C=C(C(=C2CC3=C(C(=CC4=CC=CC=C43)C(=O)O)O)O)C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.4803828001022339,
-      "ct_tox": 0.11455634981393814,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Trovafloxacin mesylate",
-      "smiles": "CS(=O)(=O)O.C1[C@@H]2[C@@H](C2N)CN1C3=C(C=C4C(=O)C(=CN(C4=N3)C5=C(C=C(C=C5)F)F)C(=O)O)F",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.6189525723457336,
-      "ct_tox": 0.21123039722442627,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ulipristal acetate",
-      "smiles": "CC(=O)[C@]1(CC[C@@H]2[C@@]1(C[C@@H](C3=C4CCC(=O)C=C4CC[C@@H]23)C5=CC=C(C=C5)N(C)C)C)OC(=O)C",
-      "dil_class": 2,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6291217803955078,
-      "ct_tox": 0.05350468307733536,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Vardenafil hydrochloride",
-      "smiles": "CCCC1=NC(=C2N1N=C(NC2=O)C3=C(C=CC(=C3)S(=O)(=O)N4CCN(CC4)CC)OCC)C.Cl",
-      "dil_class": 2,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.5721248984336853,
-      "ct_tox": 0.11567440629005432,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Venetoclax",
-      "smiles": "CC1(CCC(=C(C1)C2=CC=C(C=C2)Cl)CN3CCN(CC3)C4=CC(=C(C=C4)C(=O)NS(=O)(=O)C5=CC(=C(C=C5)NCC6CCOCC6)[N+](=O)[O-])OC7=CN=C8C(=C7)C=CN8)C",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.7984670400619507,
-      "ct_tox": 0.1233716681599617,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Vinblastine sulfate",
-      "smiles": "CC[C@@]1(C[C@H]2C[C@@](C3=C(CCN(C2)C1)C4=CC=CC=C4N3)(C5=C(C=C6C(=C5)[C@]78CCN9[C@H]7[C@@](C=CC9)([C@H]([C@@]([C@@H]8N6C)(C(=O)OC)O)OC(=O)C)CC)OC)C(=O)OC)O.OS(=O)(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.7074456810951233,
-      "ct_tox": 0.11885875463485718,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Vinorelbine tartrate",
-      "smiles": "CCC1=C[C@H]2C[C@@](C3=C(CN(C2)C1)C4=CC=CC=C4N3)(C5=C(C=C6C(=C5)[C@]78CCN9[C@H]7[C@@](C=CC9)([C@H]([C@@]([C@@H]8N6C)(C(=O)OC)O)OC(=O)C)CC)OC)C(=O)OC.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.7952771186828613,
-      "ct_tox": 0.10016665607690811,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Vitamin C",
-      "smiles": "C([C@@H]([C@@H]1C(=C(C(=O)O1)O)O)O)O",
-      "dil_class": 3,
+      "drug": "Propantheline bromide",
+      "smiles": "CC(C)[N+](C)(CCOC(=O)C1C2=CC=CC=C2OC3=CC=CC=C13)C(C)C.[Br-]",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.7169613242149353,
-      "ct_tox": 0.03364497795701027,
-      "tx_flags": 0
+      "dil_prob": 0.44557440280914307,
+      "ct_tox": 0.004105470143258572,
+      "tx_flags": 0,
+      "tox_risk": 0.16789830770964423,
+      "tier": "B"
     },
     {
-      "drug": "Voclosporin",
-      "smiles": "CC[C@H]1C(=O)N(CC(=O)N([C@H](C(=O)N[C@H](C(=O)N([C@H](C(=O)N[C@H](C(=O)N[C@@H](C(=O)N([C@H](C(=O)N([C@H](C(=O)N([C@H](C(=O)N([C@H](C(=O)N1)[C@@H]([C@H](C)C/C=C/C=C)O)C)C(C)C)C)CC(C)C)C)CC(C)C)C)C)C)CC(C)C)C)C(C)C)CC(C)C)C)C",
-      "dil_class": 2,
+      "drug": "Semaglutide",
+      "smiles": "CC[C@H](C)[C@@H](C(=O)N[C@@H](C)C(=O)N[C@@H](CC1=CNC2=CC=CC=C21)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)O)NC(=O)[C@H](CC3=CC=CC=C3)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCCCNC(=O)COCCOCCNC(=O)COCCOCCNC(=O)CC[C@H](C(=O)O)NC(=O)CCCCCCCCCCCCCCCCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)N)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC4=CC=C(C=C4)O)NC(=O)[C@H](CO)NC(=O)[C@H](CO)NC(=O)[C@H](C(C)C)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CC5=CC=CC=C5)NC(=O)[C@H]([C@@H](C)O)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)C(C)(C)NC(=O)[C@H](CC6=CN=CN6)N",
+      "dil_class": 1,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.6970468759536743,
+      "ct_tox": 0.004667217843234539,
+      "tx_flags": 0,
+      "tox_risk": 0.168066832019637,
+      "tier": "A"
+    },
+    {
+      "drug": "Exenatide synthetic",
+      "smiles": "CC[C@H](C)[C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CC1=CNC2=CC=CC=C21)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CC(=O)N)C(=O)NCC(=O)NCC(=O)N3CCC[C@H]3C(=O)N[C@@H](CO)C(=O)N[C@@H](CO)C(=O)NCC(=O)N[C@@H](C)C(=O)N4CCC[C@H]4C(=O)N5CCC[C@H]5C(=O)N6CCC[C@H]6C(=O)N[C@@H](CO)C(=O)N)NC(=O)[C@H](CC7=CC=CC=C7)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](C(C)C)NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCSC)NC(=O)[C@H](CCC(=O)N)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CO)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CC8=CC=CC=C8)NC(=O)[C@H]([C@@H](C)O)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)CNC(=O)[C@H](CC9=CNC=N9)N",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5091719627380371,
-      "ct_tox": 0.02487073466181755,
-      "tx_flags": 0
+      "dil_prob": 0.6209467053413391,
+      "ct_tox": 0.004732066765427589,
+      "tx_flags": 0,
+      "tox_risk": 0.16808628669629494,
+      "tier": "A"
     },
     {
-      "drug": "Voriconazole",
-      "smiles": "C[C@@H](C1=NC=NC=C1F)[C@](CN2C=NC=N2)(C3=C(C=C(C=C3)F)F)O",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.6318555474281311,
-      "ct_tox": 0.05703507363796234,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Zimelidine",
-      "smiles": "CN(C)C/C=C(/C1=CC=C(C=C1)Br)\\C2=CN=CC=C2",
-      "dil_class": 3,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.5246713161468506,
-      "ct_tox": 0.11932472139596939,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Zoledronic acid",
-      "smiles": "C1=CN(C=N1)CC(O)(P(=O)(O)O)P(=O)(O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6102048754692078,
-      "ct_tox": 0.10289675742387772,
-      "tx_flags": 0
-    }
-  ],
-  "filtered": [
-    {
-      "drug": "Cefotetan disodium",
-      "smiles": "CN1C(=NN=N1)SCC2=C(N3[C@@H]([C@@](C3=O)(NC(=O)C4SC(=C(C(=O)N)C(=O)[O-])S4)OC)SC2)C(=O)[O-].[Na+].[Na+]",
-      "dil_class": 0,
+      "drug": "Lutetium lu 177 dotatate",
+      "smiles": "C[C@H]([C@H]1C(=O)N[C@@H](CSSC[C@@H](C(=O)N[C@H](C(=O)N[C@@H](C(=O)N[C@H](C(=O)N1)CCCCN)CC2=CNC3=CC=CC=C32)CC4=CC=C(C=C4)O)NC(=O)[C@@H](CC5=CC=CC=C5)NC(=O)CN6CCN(CCN(CCN(CC6)CC(=O)[O-])CC(=O)[O-])CC(=O)[O-])C(=O)N[C@@H]([C@@H](C)O)C(=O)O)O.[177Lu+3]",
+      "dil_class": 1,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.719939649105072,
-      "ct_tox": 0.0015792179619893432,
-      "tx_flags": 0
+      "dil_prob": 0.8213125467300415,
+      "ct_tox": 0.005603650584816933,
+      "tx_flags": 0,
+      "tox_risk": 0.16834776184211173,
+      "tier": "A"
     },
     {
-      "drug": "Etidronate disodium",
-      "smiles": "CC(O)(P(=O)(O)[O-])P(=O)(O)[O-].[Na+].[Na+]",
-      "dil_class": 0,
+      "drug": "Haloperidol lactate",
+      "smiles": "CC(C(=O)O)O.C1CN(CCC1(C2=CC=C(C=C2)Cl)O)CCCC(=O)C3=CC=C(C=C3)F",
+      "dil_class": 1,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.8506520390510559,
+      "ct_tox": 0.006330464035272598,
+      "tx_flags": 0,
+      "tox_risk": 0.16856580587724843,
+      "tier": "A"
+    },
+    {
+      "drug": "Liraglutide",
+      "smiles": "CCCCCCCCCCCCCCCC(=O)N[C@@H](CCC(=O)NCCCC[C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H]([C@@H](C)CC)C(=O)N[C@@H](C)C(=O)N[C@@H](CC2=CNC3=CC=CC=C32)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)N)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC4=CC=C(C=C4)O)NC(=O)[C@H](CO)NC(=O)[C@H](CO)NC(=O)[C@H](C(C)C)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CC5=CC=CC=C5)NC(=O)[C@H]([C@@H](C)O)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](CC6=CN=CN6)N)C(=O)O",
+      "dil_class": 1,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.6216684579849243,
+      "ct_tox": 0.006693120114505291,
+      "tx_flags": 0,
+      "tox_risk": 0.16867460270101825,
+      "tier": "A"
+    },
+    {
+      "drug": "Corticorelin ovine triflutate",
+      "smiles": "CC[C@H](C)[C@@H](C(=O)N[C@@H](CO)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H](CC2=CN=CN2)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CCSC)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](C)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@@H](CCC(=O)N)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](CCC(=O)N)C(=O)N[C@@H](CCC(=O)N)C(=O)N[C@@H](C)C(=O)N[C@@H](CC3=CN=CN3)C(=O)N[C@@H](CO)C(=O)N[C@@H](CC(=O)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@@H]([C@@H](C)CC)C(=O)N[C@@H](C)C(=O)N)NC(=O)[C@@H]4CCCN4C(=O)[C@@H]5CCCN5C(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(=O)N)NC(=O)[C@H](CO)N",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8353957533836365,
-      "ct_tox": 0.00938284769654274,
-      "tx_flags": 0
+      "dil_prob": 0.6881124377250671,
+      "ct_tox": 0.007982657290995121,
+      "tx_flags": 0,
+      "tox_risk": 0.1690614638539652,
+      "tier": "A"
     },
     {
-      "drug": "Sodium thiosulfate",
-      "smiles": "[O-]S(=O)(=S)[O-].[Na+].[Na+]",
-      "dil_class": 0,
+      "drug": "Cisplatin",
+      "smiles": "N.N.Cl[Pt]Cl",
+      "dil_class": 1,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.8927931785583496,
+      "ct_tox": 0.008163372986018658,
+      "tx_flags": 0,
+      "tox_risk": 0.16911567856247225,
+      "tier": "A"
+    },
+    {
+      "drug": "Isosorbide mononitrate",
+      "smiles": "C1[C@@H]([C@@H]2[C@H](O1)[C@@H](CO2)O[N+](=O)[O-])O",
+      "dil_class": 1,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.8231712579727173,
+      "ct_tox": 0.009037096984684467,
+      "tx_flags": 0,
+      "tox_risk": 0.169377795762072,
+      "tier": "A"
+    },
+    {
+      "drug": "Eptifibatide",
+      "smiles": "C1C[C@H]2C(=O)N[C@@H](CSSCCC(=O)N[C@H](C(=O)NCC(=O)N[C@H](C(=O)N[C@H](C(=O)N2C1)CC3=CNC4=CC=CC=C43)CC(=O)O)CCCCN=C(N)N)C(=O)N",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6995341777801514,
-      "ct_tox": 0.010230490006506443,
-      "tx_flags": 0
+      "dil_prob": 0.7427589893341064,
+      "ct_tox": 0.011370968073606491,
+      "tx_flags": 0,
+      "tox_risk": 0.1700779570887486,
+      "tier": "A"
     },
     {
-      "drug": "Methotrexate sodium",
-      "smiles": "CN(CC1=CN=C2C(=N1)C(=NC(=N2)N)N)C3=CC=C(C=C3)C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-].[Na+].[Na+]",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.560417652130127,
-      "ct_tox": 0.012928356416523457,
-      "tx_flags": 0
+      "drug": "Succimer",
+      "smiles": "[C@@H]([C@@H](C(=O)O)S)(C(=O)O)S",
+      "dil_class": 1,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.5165140628814697,
+      "ct_tox": 0.011407073587179184,
+      "tx_flags": 0,
+      "tox_risk": 0.1700887887428204,
+      "tier": "B"
     },
     {
-      "drug": "Mycophenolic sodium",
-      "smiles": "CC1=C2COC(=O)C2=C(C(=C1OC)C/C=C(\\C)/CCC(=O)[O-])O.[Na+]",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.43923860788345337,
-      "ct_tox": 0.01318196952342987,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Leucovorin calcium",
-      "smiles": "C1C(N(C2=C(N1)N=C(NC2=O)N)C=O)CNC3=CC=C(C=C3)C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-].[Ca+2]",
-      "dil_class": 0,
+      "drug": "Linaclotide",
+      "smiles": "C[C@H]1C(=O)N[C@H]2CSSC[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@@H](CSSC[C@H](NC(=O)CNC(=O)[C@@H](NC2=O)[C@@H](C)O)C(=O)N[C@@H](CC4=CC=C(C=C4)O)C(=O)O)C(=O)N[C@@H](CSSC[C@@H](C(=O)N3)N)C(=O)N[C@H](C(=O)N5CCC[C@H]5C(=O)N1)CC(=O)N)CC6=CC=C(C=C6)O)CCC(=O)O",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6138222813606262,
-      "ct_tox": 0.014726994559168816,
-      "tx_flags": 0
+      "dil_prob": 0.6251013875007629,
+      "ct_tox": 0.011668414808809757,
+      "tx_flags": 0,
+      "tox_risk": 0.17016719110930958,
+      "tier": "A"
     },
     {
-      "drug": "Enalapril maleate",
-      "smiles": "CCOC(=O)[C@H](CCC1=CC=CC=C1)N[C@@H](C)C(=O)N2CCC[C@H]2C(=O)O.C(=C\\C(=O)O)\\C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.7250500917434692,
-      "ct_tox": 0.015131126157939434,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ethosuximide",
-      "smiles": "CCC1(CC(=O)NC1=O)C",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4201081693172455,
-      "ct_tox": 0.015584299340844154,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Divalproex sodium",
-      "smiles": "CCCC(CCC)C(=O)O.CCCC(CCC)C(=O)[O-].[Na+]",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.5650545954704285,
-      "ct_tox": 0.01807437092065811,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Betaxolol hydrochloride",
-      "smiles": "CC(C)NCC(COC1=CC=C(C=C1)CCOCC2CC2)O.Cl",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.556349515914917,
-      "ct_tox": 0.01926451362669468,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Nifedipine",
-      "smiles": "CC1=C(C(C(=C(N1)C)C(=O)OC)C2=CC=CC=C2[N+](=O)[O-])C(=O)OC",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6397109031677246,
-      "ct_tox": 0.021650055423378944,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Panobinostat lactate",
-      "smiles": "CC1=C(C2=CC=CC=C2N1)CCNCC3=CC=C(C=C3)/C=C/C(=O)NO.CC(C(=O)O)O",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4876661002635956,
-      "ct_tox": 0.024520771577954292,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Isradipine",
-      "smiles": "CC1=C(C(C(=C(N1)C)C(=O)OC(C)C)C2=CC=CC3=NON=C32)C(=O)OC",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5002136826515198,
-      "ct_tox": 0.02662317454814911,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Lisinopril",
-      "smiles": "C1C[C@H](N(C1)C(=O)[C@H](CCCCN)N[C@@H](CCC2=CC=CC=C2)C(=O)O)C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5994957685470581,
-      "ct_tox": 0.028259223327040672,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Ramipril",
-      "smiles": "CCOC(=O)[C@H](CCC1=CC=CC=C1)N[C@@H](C)C(=O)N2[C@H]3CCC[C@H]3C[C@H]2C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5918236374855042,
-      "ct_tox": 0.02948438934981823,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Meropenem",
-      "smiles": "C[C@@H]1[C@@H]2[C@H](C(=O)N2C(=C1S[C@H]3C[C@H](NC3)C(=O)N(C)C)C(=O)O)[C@@H](C)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5076540112495422,
-      "ct_tox": 0.03663187101483345,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Lefamulin acetate",
-      "smiles": "C[C@@H]1CC[C@@]23CCC(=O)[C@H]2[C@@]1([C@@H](C[C@@]([C@H]([C@@H]3C)O)(C)C=C)OC(=O)CS[C@@H]4CC[C@H](C[C@H]4O)N)C.CC(=O)O",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.6000275015830994,
-      "ct_tox": 0.036923933774232864,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Fosamprenavir calcium",
-      "smiles": "CC(C)CN(C[C@H]([C@H](CC1=CC=CC=C1)NC(=O)O[C@H]2CCOC2)OP(=O)([O-])[O-])S(=O)(=O)C3=CC=C(C=C3)N.[Ca+2]",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.6454375386238098,
-      "ct_tox": 0.03744892030954361,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Chlorambucil",
-      "smiles": "C1=CC(=CC=C1CCCC(=O)O)N(CCCl)CCCl",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.4603840410709381,
-      "ct_tox": 0.03836963325738907,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Capreomycin sulfate",
-      "smiles": "C[C@H]1C(=O)N[C@H](C(=O)N/C(=C/NC(=O)N)/C(=O)N[C@H](C(=O)NC[C@@H](C(=O)N1)N)[C@H]2CCN=C(N2)N)CNC(=O)C[C@H](CCCN)N.C1CN=C(N[C@H]1[C@H]2C(=O)NC[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N/C(=C/NC(=O)N)/C(=O)N2)CNC(=O)C[C@H](CCCN)N)CO)N)N",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.48217451572418213,
-      "ct_tox": 0.03919738531112671,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Prucalopride succinate",
-      "smiles": "COCCCN1CCC(CC1)NC(=O)C2=CC(=C(C3=C2OCC3)N)Cl.C(CC(=O)O)C(=O)O",
-      "dil_class": 0,
+      "drug": "Albuterol",
+      "smiles": "CC(C)(C)NCC(C1=CC(=C(C=C1)O)CO)O",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6011521220207214,
-      "ct_tox": 0.039546817541122437,
-      "tx_flags": 0
+      "dil_prob": 0.6251398324966431,
+      "ct_tox": 0.012358348816633224,
+      "tx_flags": 0,
+      "tox_risk": 0.17037417131165664,
+      "tier": "A"
     },
     {
-      "drug": "Rosiglitazone maleate",
-      "smiles": "CN(CCOC1=CC=C(C=C1)CC2C(=O)NC(=O)S2)C3=CC=CC=N3.C(=C\\C(=O)O)\\C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.851057231426239,
-      "ct_tox": 0.04286929592490196,
-      "tx_flags": 0
+      "drug": "Pergolide mesylate",
+      "smiles": "CCCN1C[C@@H](C[C@H]2[C@H]1CC3=CNC4=CC=CC2=C34)CSC.CS(=O)(=O)O",
+      "dil_class": 1,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.7985524535179138,
+      "ct_tox": 0.013008056208491325,
+      "tx_flags": 0,
+      "tox_risk": 0.17056908352921404,
+      "tier": "A"
     },
     {
-      "drug": "Ergocalciferol",
-      "smiles": "C[C@H](/C=C/[C@H](C)C(C)C)[C@H]1CC[C@@H]\\2[C@@]1(CCC/C2=C\\C=C/3\\C[C@H](CCC3=C)O)C",
-      "dil_class": 0,
+      "drug": "Miglustat",
+      "smiles": "CCCCN1C[C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5290279984474182,
-      "ct_tox": 0.04639999568462372,
-      "tx_flags": 0
+      "dil_prob": 0.836644172668457,
+      "ct_tox": 0.01580948568880558,
+      "tx_flags": 0,
+      "tox_risk": 0.17140951237330834,
+      "tier": "A"
     },
     {
-      "drug": "Ribociclib succinate",
-      "smiles": "CN(C)C(=O)C1=CC2=CN=C(N=C2N1C3CCCC3)NC4=NC=C(C=C4)N5CCNCC5.C(CC(=O)O)C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.4130713641643524,
-      "ct_tox": 0.05314118415117264,
-      "tx_flags": 0
+      "drug": "Mycophenolate mofetil",
+      "smiles": "CC1=C2COC(=O)C2=C(C(=C1OC)C/C=C(\\C)/CCC(=O)OCCN3CCOCC3)O",
+      "dil_class": 1,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.6057925820350647,
+      "ct_tox": 0.016001246869564056,
+      "tx_flags": 0,
+      "tox_risk": 0.17146704072753588,
+      "tier": "A"
     },
     {
-      "drug": "Fosaprepitant dimeglumine",
-      "smiles": "C[C@H](C1=CC(=CC(=C1)C(F)(F)F)C(F)(F)F)O[C@@H]2[C@@H](N(CCO2)CC3=NN(C(=O)N3)P(=O)(O)O)C4=CC=C(C=C4)F.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O.CNC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O",
-      "dil_class": 0,
+      "drug": "Nadolol",
+      "smiles": "CC(C)(C)NCC(COC1=CC=CC2=C1C[C@@H]([C@@H](C2)O)O)O",
+      "dil_class": 1,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4551311135292053,
-      "ct_tox": 0.057560939341783524,
-      "tx_flags": 0
+      "dil_prob": 0.784016489982605,
+      "ct_tox": 0.017941635102033615,
+      "tx_flags": 0,
+      "tox_risk": 0.17204915719727673,
+      "tier": "A"
     },
     {
-      "drug": "Pralidoxime chloride",
-      "smiles": "C[N+]1=CC=CC=C1/C=N/O.[Cl-]",
-      "dil_class": 0,
+      "drug": "Dexrazoxane hydrochloride",
+      "smiles": "C[C@@H](CN1CC(=O)NC(=O)C1)N2CC(=O)NC(=O)C2",
+      "dil_class": 1,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.4729780852794647,
-      "ct_tox": 0.06459704786539078,
-      "tx_flags": 0
+      "dil_prob": 0.6773273944854736,
+      "ct_tox": 0.021874133497476578,
+      "tx_flags": 0,
+      "tox_risk": 0.17322890671590963,
+      "tier": "A"
     },
     {
-      "drug": "Indapamide",
-      "smiles": "CC1CC2=CC=CC=C2N1NC(=O)C3=CC(=C(C=C3)Cl)S(=O)(=O)N",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3905671238899231,
-      "ct_tox": 0.07675571739673615,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Levonorgestrel",
-      "smiles": "CC[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@]2(C#C)O)CCC4=CC(=O)CC[C@H]34",
-      "dil_class": 0,
+      "drug": "Dimenhydrinate",
+      "smiles": "CN1C2=C(C(=O)N(C1=O)C)NC(=N2)Cl.CN(C)CCOC(C1=CC=CC=C1)C2=CC=CC=C2",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.8453053832054138,
-      "ct_tox": 0.08048318326473236,
-      "tx_flags": 0
+      "dil_prob": 0.8457292914390564,
+      "ct_tox": 0.023646917194128036,
+      "tx_flags": 0,
+      "tox_risk": 0.17376074182490506,
+      "tier": "A"
     },
     {
-      "drug": "Fluciclovine f-18",
-      "smiles": "C1C(CC1(C(=O)O)N)[18F]",
-      "dil_class": 0,
+      "drug": "Droperidol",
+      "smiles": "C1CN(CC=C1N2C3=CC=CC=C3NC2=O)CCCC(=O)C4=CC=C(C=C4)F",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.48919668793678284,
-      "ct_tox": 0.08130088448524475,
-      "tx_flags": 0
+      "dil_prob": 0.7489587068557739,
+      "ct_tox": 0.02478497102856636,
+      "tx_flags": 0,
+      "tox_risk": 0.17410215797523657,
+      "tier": "A"
     },
     {
-      "drug": "Vinorelbine tartrate",
-      "smiles": "CCC1=C[C@H]2C[C@@](C3=C(CN(C2)C1)C4=CC=CC=C4N3)(C5=C(C=C6C(=C5)[C@]78CCN9[C@H]7[C@@](C=CC9)([C@H]([C@@]([C@@H]8N6C)(C(=O)OC)O)OC(=O)C)CC)OC)C(=O)OC.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O.[C@@H]([C@H](C(=O)O)O)(C(=O)O)O",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.7952771186828613,
-      "ct_tox": 0.10016665607690811,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Prazosin hydrochloride",
-      "smiles": "COC1=C(C=C2C(=C1)C(=NC(=N2)N3CCN(CC3)C(=O)C4=CC=CO4)N)OC",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3763389587402344,
-      "ct_tox": 0.10148128867149353,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Anastrozole",
-      "smiles": "CC(C)(C#N)C1=CC(=CC(=C1)CN2C=NC=N2)C(C)(C)C#N",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.40837714076042175,
-      "ct_tox": 0.10176980495452881,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Zoledronic acid",
-      "smiles": "C1=CN(C=N1)CC(O)(P(=O)(O)O)P(=O)(O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6102048754692078,
-      "ct_tox": 0.10289675742387772,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Bedaquiline fumarate",
-      "smiles": "CN(C)CC[C@@](C1=CC=CC2=CC=CC=C21)([C@H](C3=CC=CC=C3)C4=C(N=C5C=CC(=CC5=C4)Br)OC)O.C(=C/C(=O)O)\\C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.7193359136581421,
-      "ct_tox": 0.1029665395617485,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Teriflunomide",
-      "smiles": "C/C(=C(\\C#N)/C(=O)NC1=CC=C(C=C1)C(F)(F)F)/O",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.5418464541435242,
-      "ct_tox": 0.10621987283229828,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Tetrabamate",
-      "smiles": "CCCCCOC(CN1C(=O)C(C(=O)N(C1=O)CC(COCCCC)OC(=O)N)(CC)C2=CC=CC=C2)OC(=O)N.CCCCOCC(CN1C(=O)C(C(=O)NC1=O)(CC)C2=CC=CC=C2)OC(=O)N.CCC1(C(=O)NC(=O)NC1=O)C2=CC=CC=C2",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.45725807547569275,
-      "ct_tox": 0.10703547298908234,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Triptorelin pamoate",
-      "smiles": "CC(C)C[C@@H](C(=O)N[C@@H](CCCN=C(N)N)C(=O)N1CCC[C@H]1C(=O)NCC(=O)N)NC(=O)[C@@H](CC2=CNC3=CC=CC=C32)NC(=O)[C@H](CC4=CC=C(C=C4)O)NC(=O)[C@H](CO)NC(=O)[C@H](CC5=CNC6=CC=CC=C65)NC(=O)[C@H](CC7=CN=CN7)NC(=O)[C@@H]8CCC(=O)N8.C1=CC=C2C(=C1)C=C(C(=C2CC3=C(C(=CC4=CC=CC=C43)C(=O)O)O)O)C(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.4803828001022339,
-      "ct_tox": 0.11455634981393814,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Fluoxymesterone",
-      "smiles": "C[C@]12CCC(=O)C=C1CC[C@@H]3[C@@]2([C@H](C[C@]4([C@H]3CC[C@]4(C)O)C)O)F",
-      "dil_class": 0,
-      "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3689592778682709,
-      "ct_tox": 0.1169784665107727,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Vinblastine sulfate",
-      "smiles": "CC[C@@]1(C[C@H]2C[C@@](C3=C(CCN(C2)C1)C4=CC=CC=C4N3)(C5=C(C=C6C(=C5)[C@]78CCN9[C@H]7[C@@](C=CC9)([C@H]([C@@]([C@@H]8N6C)(C(=O)OC)O)OC(=O)C)CC)OC)C(=O)OC)O.OS(=O)(=O)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.7074456810951233,
-      "ct_tox": 0.11885875463485718,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Streptomycin sulfate",
-      "smiles": "C[C@H]1[C@@]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H]([C@H]([C@@H]([C@H]2O)O)N=C(N)N)O)N=C(N)N)O[C@H]3[C@H]([C@@H]([C@H]([C@@H](O3)CO)O)O)NC)(C=O)O",
-      "dil_class": 0,
+      "drug": "Caffeine citrate",
+      "smiles": "CN1C=NC2=C1C(=O)N(C(=O)N2C)C.C(C(=O)O)C(CC(=O)O)(C(=O)O)O",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5170691609382629,
-      "ct_tox": 0.12298136204481125,
-      "tx_flags": 0
+      "dil_prob": 0.5985665321350098,
+      "ct_tox": 0.025135463103652,
+      "tx_flags": 0,
+      "tox_risk": 0.17420730559776226,
+      "tier": "B"
     },
     {
-      "drug": "Venetoclax",
-      "smiles": "CC1(CCC(=C(C1)C2=CC=C(C=C2)Cl)CN3CCN(CC3)C4=CC(=C(C=C4)C(=O)NS(=O)(=O)C5=CC(=C(C=C5)NCC6CCOCC6)[N+](=O)[O-])OC7=CN=C8C(=C7)C=CN8)C",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.7984670400619507,
-      "ct_tox": 0.1233716681599617,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Lamivudine",
-      "smiles": "C1[C@H](O[C@H](S1)CO)N2C=CC(=NC2=O)N",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.6548177003860474,
-      "ct_tox": 0.13008330762386322,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Protirelin",
-      "smiles": "C1C[C@H](N(C1)C(=O)[C@H](CC2=CN=CN2)NC(=O)[C@@H]3CCC(=O)N3)C(=O)N",
-      "dil_class": 0,
+      "drug": "Dapagliflozin",
+      "smiles": "CCOC1=CC=C(C=C1)CC2=C(C=CC(=C2)[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O)Cl",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.6061066389083862,
-      "ct_tox": 0.13384544849395752,
-      "tx_flags": 0
+      "dil_prob": 0.8117578029632568,
+      "ct_tox": 0.028437936678528786,
+      "tx_flags": 0,
+      "tox_risk": 0.1751980476702253,
+      "tier": "A"
     },
     {
-      "drug": "Cidofovir",
-      "smiles": "C1=CN(C(=O)N=C1N)C[C@@H](CO)OCP(=O)(O)O",
-      "dil_class": 0,
+      "drug": "Levetiracetam",
+      "smiles": "CC[C@@H](C(=O)N)N1CCCC1=O",
+      "dil_class": 1,
+      "dili_concern": "vLess-DILI-concern",
+      "dil_prob": 0.495472252368927,
+      "ct_tox": 0.03238680958747864,
+      "tx_flags": 0,
+      "tox_risk": 0.17638270954291024,
+      "tier": "B"
+    },
+    {
+      "drug": "Fidaxomicin",
+      "smiles": "CC[C@H]1/C=C(/[C@H](C/C=C/C=C(/C(=O)O[C@@H](C/C=C(/C=C(/[C@@H]1O[C@H]2[C@H]([C@H]([C@@H](C(O2)(C)C)OC(=O)C(C)C)O)O)\\C)\\C)[C@@H](C)O)\\CO[C@H]3[C@H]([C@H]([C@@H]([C@H](O3)C)OC(=O)C4=C(C(=C(C(=C4O)Cl)O)Cl)CC)O)OC)O)\\C",
+      "dil_class": 1,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.3365178108215332,
-      "ct_tox": 0.13385111093521118,
-      "tx_flags": 0
+      "dil_prob": 0.3276057541370392,
+      "ct_tox": 0.03715161234140396,
+      "tx_flags": 0,
+      "tox_risk": 0.17781215036908785,
+      "tier": "B"
     },
     {
-      "drug": "Prednisolone",
-      "smiles": "C[C@]12C[C@@H]([C@H]3[C@H]([C@@H]1CC[C@@]2(C(=O)CO)O)CCC4=CC(=O)C=C[C@]34C)O",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5420123338699341,
-      "ct_tox": 0.14421312510967255,
-      "tx_flags": 0
+      "drug": "Indinavir sulfate",
+      "smiles": "CC(C)(C)NC(=O)[C@@H]1CN(CCN1C[C@H](C[C@@H](CC2=CC=CC=C2)C(=O)N[C@@H]3[C@@H](CC4=CC=CC=C34)O)O)CC5=CN=CC=C5.OS(=O)(=O)O",
+      "dil_class": 1,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.35122111439704895,
+      "ct_tox": 0.03892134502530098,
+      "tx_flags": 0,
+      "tox_risk": 0.17834307017425696,
+      "tier": "B"
     },
     {
-      "drug": "Prednisone",
-      "smiles": "C[C@]12CC(=O)[C@H]3[C@H]([C@@H]1CC[C@@]2(C(=O)CO)O)CCC4=CC(=O)C=C[C@]34C",
-      "dil_class": 0,
-      "dili_concern": "vLess-DILI-concern",
-      "dil_prob": 0.5687192678451538,
-      "ct_tox": 0.149332657456398,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Naldemedine tosylate",
-      "smiles": "CC1=CC=C(C=C1)S(=O)(=O)O.CC(C)(C1=NC(=NO1)C2=CC=CC=C2)NC(=O)C3=C([C@H]4[C@@]56CCN([C@@H]([C@@]5(C3)O)CC7=C6C(=C(C=C7)O)O4)CC8CC8)O",
-      "dil_class": 0,
+      "drug": "Carbinoxamine maleate",
+      "smiles": "CN(C)CCOC(C1=CC=C(C=C1)Cl)C2=CC=CC=N2.C(=C\\C(=O)O)\\C(=O)O",
+      "dil_class": 1,
       "dili_concern": "vNo-DILI-concern",
-      "dil_prob": 0.5466742515563965,
-      "ct_tox": 0.14966930449008942,
-      "tx_flags": 0
+      "dil_prob": 0.6839151978492737,
+      "ct_tox": 0.04089892655611038,
+      "tx_flags": 0,
+      "tox_risk": 0.17893634463349978,
+      "tier": "A"
     },
     {
-      "drug": "Enasidenib mesylate",
-      "smiles": "CC(C)(CNC1=NC(=NC(=N1)C2=NC(=CC=C2)C(F)(F)F)NC3=CC(=NC=C3)C(F)(F)F)O.CS(=O)(=O)O",
-      "dil_class": 0,
+      "drug": "Pimozide",
+      "smiles": "C1CN(CCC1N2C3=CC=CC=C3NC2=O)CCCC(C4=CC=C(C=C4)F)C5=CC=C(C=C5)F",
+      "dil_class": 1,
+      "dili_concern": "vNo-DILI-concern",
+      "dil_prob": 0.7897960543632507,
+      "ct_tox": 0.04280791059136391,
+      "tx_flags": 0,
+      "tox_risk": 0.17950903984407582,
+      "tier": "A"
+    },
+    {
+      "drug": "Ponesimod",
+      "smiles": "CCCN=C1N(C(=O)/C(=C/C2=CC(=C(C=C2)OC[C@@H](CO)O)Cl)/S1)C3=CC=CC=C3C",
+      "dil_class": 1,
       "dili_concern": "Ambiguous-DILI-concern",
-      "dil_prob": 0.8046408891677856,
-      "ct_tox": 0.16396689414978027,
-      "tx_flags": 0
+      "dil_prob": 0.46874573826789856,
+      "ct_tox": 0.056927841156721115,
+      "tx_flags": 0,
+      "tox_risk": 0.18374501901368298,
+      "tier": "B"
     },
     {
-      "drug": "Exemestane",
-      "smiles": "C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CC(=C)C4=CC(=O)C=C[C@]34C",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.7099707722663879,
-      "ct_tox": 0.1736713945865631,
-      "tx_flags": 0
-    },
-    {
-      "drug": "Bortezomib",
-      "smiles": "B([C@H](CC(C)C)NC(=O)[C@H](CC1=CC=CC=C1)NC(=O)C2=NC=CN=C2)(O)O",
-      "dil_class": 0,
-      "dili_concern": "vMost-DILI-concern",
-      "dil_prob": 0.46806973218917847,
-      "ct_tox": 0.19609765708446503,
-      "tx_flags": 0
+      "drug": "Mechlorethamine hydrochloride",
+      "smiles": "CN(CCCl)CCCl",
+      "dil_class": 1,
+      "dili_concern": "Ambiguous-DILI-concern",
+      "dil_prob": 0.419776976108551,
+      "ct_tox": 0.06426732987165451,
+      "tx_flags": 0,
+      "tox_risk": 0.185946865628163,
+      "tier": "B"
     }
   ],
   "docking": []

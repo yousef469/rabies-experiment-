@@ -1,22 +1,32 @@
 """
-screen_repurpose.py — Screen held-out FDA drugs for rabies repurposing.
+screen_repurpose.py — Rank a PANEL of N candidate drugs for rabies.
 
-Pipeline: GNN toxicity filter → (optional) AutoDock Vina → candidate ranking.
+WHY A PANEL, NOT A CURE
+-----------------------
+The goal of this project is *not* to output one "cure". It is to output a ranked
+panel of candidates (default 100), each with a transparent score breakdown and an
+explicit uncertainty tier, so a wet lab can test them in order and maybe find one
+that works. A ranking is a hypothesis; the experiment is what decides.
+
+TARGET
+------
+The rabies virus (RABV) has five proteins: G, L, N, P, M. Only the glycoprotein
+G has a structure available here (PDB 6LGX, cached in pdb_cache/), so only G is
+screened. L / N / P / M are listed but *not* screened (no structure) — see the
+TARGETS table below and LIMITATIONS.md.
 
 LEAKAGE FIX
 -----------
-The GNN is trained on DILIrank. Predicting DILIrank and then selecting the drugs the
-model already calls "low toxicity" is circular: those are the very labels it was fit
-on. This script therefore reproduces the trainer's 3-way split (seed 42) and screens
-ONLY the held-out test drugs, so the reported toxicity predictions are genuinely
-out-of-sample. If the split cannot be reproduced the script stops instead of
-silently scoring training compounds.
+The GNN is trained on DILIrank. Screening the drugs it was fit on would be
+circular, so this script reproduces the trainer's 3-way split (seed 42) and
+scores ONLY the held-out test drugs. If the split cannot be reproduced the script
+stops rather than silently scoring training compounds.
 
 DOCKING CAVEAT
 --------------
 Vina is run as BLIND docking (box centred on the receptor centroid, 26 Å cube,
-exhaustiveness 8). This is a coarse screen, not a validated binding-mode analysis;
-scores are used only to order candidates. See LIMITATIONS.md.
+exhaustiveness 8). This is a coarse screen for ORDERING candidates, not a
+validated binding-mode analysis. See LIMITATIONS.md.
 """
 
 import sys, os, json, argparse, numpy as np, pandas as pd, torch, torch.nn as nn, torch.nn.functional as F
@@ -34,6 +44,28 @@ print(f'Device: {DEVICE}')
 
 DATA_DIR = 'data'
 VINA_BIN = "/usr/local/bin/vina"
+
+# RABV proteins. Only G has a structure available, so only G is screened.
+TARGETS = [
+    # (gene, name,            role,                  structure_available)
+    ('G', 'glycoprotein',   'cell entry / fusion',  True),
+    ('L', 'polymerase',     'genome replication',   False),
+    ('N', 'nucleoprotein',  'RNA packaging',        False),
+    ('P', 'phosphoprotein', 'polymerase cofactor',  False),
+    ('M', 'matrix',         'virion assembly',      False),
+]
+
+# How many ranked candidates to emit (the "panel").
+PANEL_N = 100
+
+_args = argparse.ArgumentParser(description='Rank a panel of candidate drugs for RABV.')
+_args.add_argument('--n', type=int, default=PANEL_N,
+                   help=f'panel size, i.e. how many ranked candidates to emit (default {PANEL_N})')
+_args.add_argument('--dock', action='store_true',
+                   help='also run AutoDock Vina on the top candidates (slow)')
+_args.add_argument('--dock-n', type=int, default=30,
+                   help='how many top candidates to dock when --dock is set (default 30)')
+args = _args.parse_args()
 
 # Severity map — must match train_toxicity.py so the split is reproducible.
 SEV_MAP = {'vMost-DILI-concern': 3, 'vMOST-DILI-concern': 3, 'vLess-DILI-concern': 2,
@@ -188,29 +220,46 @@ for i, row in dil.iterrows():
 
 print(f'Predicted {len(results)} held-out drugs')
 
-# ─── 4. FILTER ──────────────────────────────────────────────
-# Low-toxicity: DILI class 0 (Ambiguous) or 1 (No-concern), <3 Tox21 flags
-filtered = [r for r in results if r['dil_class'] in (0, 1) and r['tx_flags'] < 3]
-filtered.sort(key=lambda r: (r['dil_class'], r['tx_flags'], r['ct_tox']))
+# ─── 4. SCORE + BUILD THE RANKED PANEL ─────────────────────
+# Transparent toxicity risk (lower = better). The components are kept per
+# candidate so the ranking is auditable, not a single magic number.
+def toxicity_risk(r):
+    dil_term = r['dil_class'] / 3.0            # 0 (no concern) .. 1 (most concern)
+    ct_term = min(max(r['ct_tox'], 0.0), 1.0)  # ClinTox probability
+    tx_term = min(r['tx_flags'] / 12.0, 1.0)   # fraction of Tox21 endpoints flagged
+    return 0.5 * dil_term + 0.3 * ct_term + 0.2 * tx_term
 
-print(f'\nLow-toxicity candidates (held-out): {len(filtered)}')
-print(f'\n{"Drug":<30} {"DILI":<12} {"Flags":<6} {"CT_TOX":<8}')
-print('-'*56)
-for r in filtered[:30]:
-    dil_name = ['Ambiguous', 'No-concern', 'Less-concern', 'Most-concern'][r['dil_class']]
-    print(f'{r["drug"]:<30} {dil_name:<12} {r["tx_flags"]:<6} {r["ct_tox"]:<8.3f}')
+def uncertainty_tier(r):
+    """How much the three toxicity heads agree. A = strongest hypothesis."""
+    if r['dil_class'] == 1 and r['dil_prob'] >= 0.6 and r['tx_flags'] == 0 and r['ct_tox'] < 0.3:
+        return 'A'
+    if r['dil_class'] in (0, 1) and r['tx_flags'] <= 1:
+        return 'B'
+    return 'C'
 
-# ─── 5. DOCK TOP 30 ────────────────────────────────────────
-parser = argparse.ArgumentParser()
-parser.add_argument('--dock', action='store_true',
-                    help='run AutoDock Vina on the top candidates (slow)')
-args = parser.parse_args()
+print('\nTargets considered (RABV):')
+for gene, name, role, has_struct in TARGETS:
+    tag = 'SCREENED (6LGX)' if has_struct else 'not screened (no structure)'
+    print(f'  {gene}  {name:<14} {role:<22} {tag}')
 
-linked = filtered[:30]
+for r in results:
+    r['tox_risk'] = toxicity_risk(r)
+    r['tier'] = uncertainty_tier(r)
+
+# Panel = held-out drugs with a favourable predicted safety profile.
+panel = [r for r in results if r['dil_class'] in (0, 1) and r['tx_flags'] < 3]
+panel.sort(key=lambda r: (r['tox_risk'], r['tx_flags'], r['ct_tox']))
+panel = panel[:args.n]
+
+print(f'\nPanel: {len(panel)} ranked low-toxicity held-out candidates '
+      f'(target: RABV glycoprotein G)')
+
+# ─── 5. DOCK TOP CANDIDATES (optional) ─────────────────────
+linked = panel[:args.dock_n]
 docking_results = []
 
 if not args.dock:
-    print('\n[skip] docking step (pass --dock to run AutoDock Vina)')
+    print(f'\n[skip] docking step (pass --dock to run AutoDock Vina on top {args.dock_n})')
 
 import subprocess, tempfile
 from rdkit.Chem import AllChem
@@ -331,30 +380,41 @@ def run_docking(candidates):
 docking_results = run_docking(linked) if args.dock else []
 
 # ─── 6. REPORT ──────────────────────────────────────────────
-print('\n' + '='*60)
-print('RESULTS: FDA DRUG REPURPOSING FOR RABIES (held-out drugs only)')
-print('='*60)
+print('\n' + '='*78)
+print('RANKED PANEL — candidate drugs for the RABV glycoprotein (held-out only)')
+print('A ranking is a hypothesis, not a cure. The wet lab decides.')
+print('='*78)
 
 if docking_results:
-    print(f'\n{"Rank":<5} {"Drug":<25} {"DILI Class":<12} {"Binding":<10} {"Flags":<5}')
-    print('-'*60)
+    print(f'\n{"Rank":<5} {"Drug":<26} {"Risk":<7} {"Tier":<5} {"Flags":<6} {"Binding":<9}')
+    print('-'*70)
     for rank, r in enumerate(docking_results, 1):
-        dil_name = ['Ambiguous', 'No-concern', 'Less-concern', 'Most-concern'][r['dil_class']]
-        print(f'{rank:<5} {r["drug"]:<25} {dil_name:<12} {r["binding_energy"]:<10.2f} {r["tx_flags"]:<5}')
-elif linked:
-    print('\nTop low-toxicity held-out candidates (docking skipped — pass --dock to rank by binding):')
-    print(f'\n{"Rank":<5} {"Drug":<25} {"DILI Class":<12} {"Flags":<6} {"CT_TOX":<8}')
-    print('-'*60)
-    for rank, r in enumerate(linked, 1):
-        dil_name = ['Ambiguous', 'No-concern', 'Less-concern', 'Most-concern'][r['dil_class']]
-        print(f'{rank:<5} {r["drug"]:<25} {dil_name:<12} {r["tx_flags"]:<6} {r["ct_tox"]:<8.3f}')
+        print(f'{rank:<5} {r["drug"][:25]:<26} {r["tox_risk"]:<7.3f} {r["tier"]:<5} '
+              f'{r["tx_flags"]:<6} {r["binding_energy"]:<9.2f}')
 else:
-    print('No low-toxicity candidates among held-out drugs')
+    print(f'\n{"Rank":<5} {"Drug":<26} {"DILI class":<12} {"Risk":<7} {"Tier":<5} {"Flags":<6}')
+    print('-'*70)
+    for rank, r in enumerate(panel, 1):
+        dil_name = ['Ambiguous', 'No-concern', 'Less-concern', 'Most-concern'][r['dil_class']]
+        print(f'{rank:<5} {r["drug"][:25]:<26} {dil_name:<12} {r["tox_risk"]:<7.3f} '
+              f'{r["tier"]:<5} {r["tx_flags"]:<6}')
+
+print('\nScore = 0.5*DILI + 0.3*ClinTox + 0.2*Tox21_flags  (lower is better).')
+print('Tier A/B/C = agreement across the three toxicity heads (A = strongest hypothesis).')
+print('These are ranked HYPOTHESES for wet-lab testing, not validated actives.')
 
 # Save
 out = {
-    'all_predictions': [{k: v for k, v in r.items() if k != 'tx_probs'} | {'tx_flags': r['tx_flags']} for r in results],
-    'filtered': [{k: v for k, v in r.items() if k != 'tx_probs'} for r in filtered[:50]],
+    'meta': {
+        'purpose': 'ranked panel of candidate drugs (not a single cure)',
+        'target': 'RABV glycoprotein G (PDB 6LGX)',
+        'targets_not_screened': [g for g, _, _, s in TARGETS if not s],
+        'screened': 'held-out DILIrank test drugs only (no leakage)',
+        'panel_size': len(panel),
+        'score': '0.5*dil_class/3 + 0.3*clin_tox + 0.2*tox21_flags/12 (lower=better)',
+        'caveat': 'ranked hypotheses for wet-lab testing, not validated actives',
+    },
+    'panel': [{k: v for k, v in r.items() if k != 'tx_probs'} for r in panel],
     'docking': [{k: v for k, v in r.items() if k != 'tx_probs'} for r in docking_results],
 }
 with open(os.path.join(DATA_DIR, 'repurposing_results.json'), 'w') as f:
