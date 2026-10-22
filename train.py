@@ -3,7 +3,7 @@ Self-supervised pretraining + fine-tuning for viral sequence understanding.
 
 Phase 1: Masked language modeling on lyssavirus genomes
 Phase 2: Fine-tune on protein region prediction
-Phase 3 (optional): Cure screening with drug molecules
+Phase 3 (optional): Candidate screening with drug molecules
 """
 import os
 import sys

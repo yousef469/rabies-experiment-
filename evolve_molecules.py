@@ -1,7 +1,7 @@
 """
 Genetic Algorithm Molecule Optimizer
 
-Evolves molecules toward higher composite cure scores.
+Evolves molecules toward higher composite scores.
 Mutation + selection + crossover over many generations.
 
 Usage:
@@ -284,7 +284,7 @@ def score_fitness_light(smiles, dose_mg=500, n_doses=14):
             'Cmax_brain_uM': cmax,
             'time_above_ec50_hrs': time_above,
             'toxicity': tox,
-            'viral': {'cured': False, 'survival_fraction': 0},
+            'viral': {'cleared': False, 'survival_fraction': 0},
             'smiles': smiles,
         }
     except:
@@ -334,7 +334,7 @@ def score_fitness_vina(smiles, use_immune_model=True, verbose=False):
         # Viral dynamics with immune response (QD keeps trough below EC50 → differentiates)
         viral = simulate_viral_dynamics_immune(pkpd, duration_hrs=720, treatment_delay_hrs=48)
         survival = viral['survival_fraction']
-        cured = viral.get('cured', False)
+        cleared = viral.get('cleared', False)
 
         # BBB + toxicity
         bbb = get_bbb_permeability(smiles)
@@ -357,7 +357,7 @@ def score_fitness_vina(smiles, use_immune_model=True, verbose=False):
             'viral': viral,
             'toxicity': tox,
             'survival': survival,
-            'cured': cured,
+            'cleared': cleared,
             'smiles': smiles,
         }
     except Exception as e:
@@ -384,7 +384,7 @@ def is_valid_mol(smiles):
 
 
 def evolve(generations=50, population_size=30, dose_mg=500, n_doses=14, verbose=True, resume_from=None, use_vina=False):
-    """Run genetic algorithm to evolve molecules toward higher cure scores."""
+    """Run genetic algorithm to evolve molecules toward higher composite scores."""
     random.seed(42)
     np.random.seed(42)
 
@@ -444,16 +444,16 @@ def evolve(generations=50, population_size=30, dose_mg=500, n_doses=14, verbose=
                 result = score_fitness(smi, dose_mg=dose_mg, n_doses=n_doses, verbose=False)
             if result is None:
                 score = 0
-                cured = False
+                cleared = False
                 survival = 0
             else:
                 score = result['composite_score']
-                cured = result['viral']['cured']
+                cleared = result['viral']['cleared']
                 survival = result['viral']['survival_fraction']
 
-            scored.append((smi, score, cured, survival, result))
-            if verbose and (i < 3 or score > 0.6 or cured):
-                marker = "**CURE**" if cured else " "
+            scored.append((smi, score, cleared, survival, result))
+            if verbose and (i < 3 or score > 0.6 or cleared):
+                marker = "**CLEARED**" if cleared else " "
                 if use_vina:
                     v = result.get('vina_score', 0)
                     print(f"  {i+1:>2}. {marker} {smi:<40} score={score:.4f}  surv={survival:.3f}  dock={v:.2f}")
@@ -465,7 +465,7 @@ def evolve(generations=50, population_size=30, dose_mg=500, n_doses=14, verbose=
 
         gen_best = scored[0][1]
         gen_best_smi = scored[0][0]
-        gen_best_cured = scored[0][2]
+        gen_best_cleared = scored[0][2]
 
         if gen_best > best_score:
             best_score = gen_best
@@ -475,15 +475,15 @@ def evolve(generations=50, population_size=30, dose_mg=500, n_doses=14, verbose=
             'generation': int(gen),
             'best_score': float(gen_best),
             'best_smiles': str(gen_best_smi),
-            'cured': bool(gen_best_cured),
+            'cleared': bool(gen_best_cleared),
             'pop_size': int(len(population)),
         })
 
-        print(f"\n  Generation {gen} best: {gen_best_smi}  score={gen_best:.4f}  cured={gen_best_cured}")
+        print(f"\n  Generation {gen} best: {gen_best_smi}  score={gen_best:.4f}  cleared={gen_best_cleared}")
         print(f"  All-time best: {best_smiles}  score={best_score:.4f}")
 
-        if gen_best_cured:
-            print(f"\n  *** CURE FOUND in generation {gen}! ***")
+        if gen_best_cleared:
+            print(f"\n  *** VIRAL CLEARANCE in generation {gen} ***")
             print(f"  SMILES: {gen_best_smi}")
             # Save immediately
             with open('cure_found.json', 'w') as f:
@@ -491,7 +491,7 @@ def evolve(generations=50, population_size=30, dose_mg=500, n_doses=14, verbose=
                           'result': scored[0][4]}, f, indent=2, default=str)
             # Break or continue? Let's continue to see if we can find better
             if verbose:
-                print("  Continuing to find better cure candidates...")
+                print("  Continuing to search for better candidates...")
 
         # Selection: keep top 30%
         keep = max(population_size // 3, 5)
@@ -559,7 +559,6 @@ def evolve(generations=50, population_size=30, dose_mg=500, n_doses=14, verbose=
         print(f"  Generations: {generations}")
         print(f"  Best score:  {best_score:.4f}")
         print(f"  Best SMILES: {best_smiles}")
-        print(f"  Cured:       {bool(best_score > 0.8)}")
 
     if best_smiles and False:  # skip final detailed scoring (already done)
         pass

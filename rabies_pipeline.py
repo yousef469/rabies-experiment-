@@ -1,5 +1,5 @@
 """
-Rabies Cure Pipeline - End-to-End Drug Discovery
+Rabies Candidate Pipeline - End-to-End Ranking
 
 Integrates all modules:
 1. Structure prediction → 2. Pocket detection → 3. Molecule generation
@@ -22,7 +22,7 @@ def main():
     args = parser.parse_args()
 
     print("="*70)
-    print("  RABIES CURE PIPELINE")
+    print("  RABIES CANDIDATE PIPELINE")
     print("  Universal Antiviral Platform for Brain-Invading Viruses")
     print("="*70)
     start_time = time.time()
@@ -207,11 +207,11 @@ def main():
         s['viral'] = {
             'survival_fraction': viral['survival_fraction'],
             'peak_virus': viral['peak_virus'],
-            'cured': viral['cured'],
+            'cleared': viral['cleared'],
         }
 
-    cured_count = sum(1 for s in scored[:args.top_k * 2] if s.get('viral', {}).get('cured', False))
-    print(f"  Cured: {cured_count}/{min(args.top_k * 2, len(scored))}")
+    cleared_count = sum(1 for s in scored[:args.top_k * 2] if s.get('viral', {}).get('cleared', False))
+    print(f"  Cleared: {cleared_count}/{min(args.top_k * 2, len(scored))}")
 
     # ============================================================
     # STAGE 8: Toxicity Prediction
@@ -252,7 +252,7 @@ def main():
 
     # Print final ranking
     print(f"\n{'='*70}")
-    print(f"  FINAL RANKING: {args.target.upper()} CURE CANDIDATES")
+    print(f"  FINAL RANKING: {args.target.upper()} CANDIDATE PANEL")
     print(f"{'='*70}")
     print(f"  {'Rank':<5} {'Name':<25} {'Score':<8} {'BBB':<8} {'PK/PD':<8} {'Viral':<8} {'Safe':<6} {'DL':<6}")
     print(f"  {'-'*5} {'-'*25} {'-'*8} {'-'*8} {'-'*8} {'-'*8} {'-'*6} {'-'*6}")
@@ -263,7 +263,6 @@ def main():
         viral = s.get('viral', {}).get('survival_fraction', 0)
         tox = 1.0 - s.get('toxicity', {}).get('score', 0)
         dl = s.get('drug_likeness', 0)
-        cured = "YES" if s.get('viral', {}).get('cured', False) else "NO"
         toxic = "!" if s.get('toxicity', {}).get('toxic', False) else " "
 
         print(f"  {i+1:<5} {s['name']:<25} {s['composite']:<8.3f} {bbb:<8.3f} {pk:<8.3f} {viral:<8.3f} {tox:<6.2f} {dl:<6.2f} {toxic}")

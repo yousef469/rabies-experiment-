@@ -1,6 +1,6 @@
 """
 Exact temporal simulation: 4-CF3-Ph Benzimidazolinone vs Rabies
-Shows the minute-by-minute battle and when the cure wins.
+Shows the minute-by-minute battle and whether the virus is cleared.
 """
 import sys, numpy as np, json
 sys.path.insert(0, '.')
@@ -112,7 +112,7 @@ v_clear_t = find_event(t, V, 1, 'below')
 # Find when neuron death rate drops below 1 per hour
 dS_dt = np.diff(S) / np.diff(t)
 stable_idx = np.where(np.abs(dS_dt) < 0.5)[0]
-cure_time = t[stable_idx[0]] if len(stable_idx) > 0 else t[-1]
+stable_time = t[stable_idx[0]] if len(stable_idx) > 0 else t[-1]
 
 print()
 print("=" * 65)
@@ -152,8 +152,8 @@ if drug_c.min() > 6:
     if above_t is not None:
         print(f"  {above_t + treatment_delay:>5.0f}h  Drug stays above EC50 (suppression sustained)")
 
-# Cure time
-print(f"  {cure_time:>5.0f}h  Neuron death stabilizes — cure wins")
+# Neuron-death stabilization (suppression, not clearance)
+print(f"  {stable_time:>5.0f}h  Neuron death stabilizes")
 
 if v_clear_t:
     print(f"  {v_clear_t:>5.0f}h  Virus cleared (<1 particle)")
@@ -172,7 +172,9 @@ print(f"  {'Survival:':>25} {S[-1]/1e6*100:>9.2f}% {Su[-1]/1e6*100:>9.2f}%")
 print(f"  {'Virus remaining:':>25} {V[-1]:>10.1f} {Vu[-1]:>10,.0f}")
 print(f"  {'Infected cells:':>25} {I[-1]:>10.0f} {Iu[-1]:>10,.0f}")
 print(f"  {'Immune memory:':>25} {E[-1]:>10.2f} {Eu[-1]:>10.2f}")
-print(f"  {'Cured:':>25} {'YES' if S[-1]/1e6 > 0.99 else 'NO':>10} {'NO':>12}")
+# Clearance = virus AND infected cells driven to extinction (not "most neurons survived")
+cleared = bool(V[-1] < 1.0 and I[-1] < 1.0)
+print(f"  {'Viral clearance:':>25} {'YES' if cleared else 'NO':>10} {'NO':>12}")
 
 # Neuron loss comparison
 print()
@@ -198,7 +200,7 @@ for start, end, label in phases:
 # Key insight: drug mechanism
 print()
 print(f"  {'='*65}")
-print(f"  HOW THE CURE WORKS")
+print(f"  HOW SUPPRESSION WORKS")
 print(f"  {'='*65}")
 print(f"  1. BID IV dosing keeps brain drug trough at {drug_c.min():.1f}uM (EC50={v_params['EC50_v']}uM)")
 print(f"  2. Drug suppresses virus replication: drug_eff = alpha * D^1.5 / (EC50^1.5 + D^1.5)")

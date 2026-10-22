@@ -59,9 +59,13 @@ intentionally blunt. If a claim is not supported, it should not be made.
 
 ## 6. Target and receptor choices are unvalidated
 
-- Rabies has no well-established small-molecule drug target. The receptor used
-  for docking (e.g. PDB 6LGX) was chosen as a plausible surrogate, not because
-  it is a validated anti-rabies target.
+- PDB 6LGX *is* the rabies virus glycoprotein G — the genuine target protein,
+  and the only RABV protein with an experimental structure — so the receptor is
+  not a surrogate for a different molecule. What is missing is that no small
+  molecule is a *validated* drug against it: the glycoprotein is an
+  established vaccine/antibody target, but not a clinically validated
+  small-molecule target. Docking to it is therefore hypothesis-generating, not
+  a validated screen.
 - The "lead molecule" is an arbitrary output of the design pipeline; it is not
   the result of a validated structure-activity study.
 

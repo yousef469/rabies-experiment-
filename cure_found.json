@@ -1,5 +1,5 @@
 {
-  "_note": "This file records the lead molecule selected by the design pipeline. It is NOT evidence of a cure. Under the corrected outcome definition (viral + infected-cell extinction with no rebound), no molecule achieved clearance; the genetic algorithm never writes a cured=true record.",
+  "_note": "This file records the lead molecule selected by the design pipeline. It is NOT evidence of a cure. Under the corrected outcome definition (viral + infected-cell extinction with no rebound), no molecule achieved clearance; the genetic algorithm never writes a cleared=true record.",
   "generation": 2,
   "smiles": "CC1=CC(=O)NC2=CC=CC=C12",
   "selected_as": "highest heuristic ranking score in the GA search (ordering metric only)",
