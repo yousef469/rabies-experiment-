@@ -1,0 +1,560 @@
+{
+  "baseline": {
+    "peak_virus": 3258.604889939734,
+    "final_virus": 3258.604889939734,
+    "final_infected": 919.7568526508301,
+    "neurons_preserved": 0.9982695977822749,
+    "outcome": "ONGOING"
+  },
+  "rows": [
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "PD EC50 (uM)",
+      "value": 1
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "PD EC50 (uM)",
+      "value": 3
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "PD EC50 (uM)",
+      "value": 10
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "PD EC50 (uM)",
+      "value": 30
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "PD EC50 (uM)",
+      "value": 100
+    },
+    {
+      "peak_virus": 2639.841015513141,
+      "final_virus": 2639.841015513141,
+      "final_infected": 748.5364073663799,
+      "neurons_preserved": 0.99857153310355,
+      "outcome": "ONGOING",
+      "param": "Viral EC50 (uM)",
+      "value": 1
+    },
+    {
+      "peak_virus": 3019.5136663680014,
+      "final_virus": 3019.5136663680014,
+      "final_infected": 851.749776771495,
+      "neurons_preserved": 0.9983909091220918,
+      "outcome": "ONGOING",
+      "param": "Viral EC50 (uM)",
+      "value": 3
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "Viral EC50 (uM)",
+      "value": 6
+    },
+    {
+      "peak_virus": 3517.7227818094193,
+      "final_virus": 3517.7227818094193,
+      "final_infected": 991.1681934272226,
+      "neurons_preserved": 0.9981410116342347,
+      "outcome": "ONGOING",
+      "param": "Viral EC50 (uM)",
+      "value": 12
+    },
+    {
+      "peak_virus": 3770.1476603330216,
+      "final_virus": 3770.1476603330216,
+      "final_infected": 1062.1698225452328,
+      "neurons_preserved": 0.9980126726089709,
+      "outcome": "ONGOING",
+      "param": "Viral EC50 (uM)",
+      "value": 24
+    },
+    {
+      "peak_virus": 3950.1711700346477,
+      "final_virus": 3950.1711700346477,
+      "final_infected": 1113.3316035390085,
+      "neurons_preserved": 0.9979195507527431,
+      "outcome": "ONGOING",
+      "param": "Viral kill alpha",
+      "value": 0.05
+    },
+    {
+      "peak_virus": 3553.771110801785,
+      "final_virus": 3553.771110801785,
+      "final_infected": 1002.0616408487788,
+      "neurons_preserved": 0.9981207525190154,
+      "outcome": "ONGOING",
+      "param": "Viral kill alpha",
+      "value": 0.15
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "Viral kill alpha",
+      "value": 0.25
+    },
+    {
+      "peak_virus": 2781.5188110419326,
+      "final_virus": 2781.5188110419326,
+      "final_infected": 784.2628001045179,
+      "neurons_preserved": 0.9985143436069528,
+      "outcome": "ONGOING",
+      "param": "Viral kill alpha",
+      "value": 0.5
+    },
+    {
+      "peak_virus": 2285.8617225115513,
+      "final_virus": 2285.8617225115513,
+      "final_infected": 645.1135925439961,
+      "neurons_preserved": 0.9987655189763445,
+      "outcome": "ONGOING",
+      "param": "Viral kill alpha",
+      "value": 1.0
+    },
+    {
+      "peak_virus": 1000.0,
+      "final_virus": 7.158103210856803,
+      "final_infected": 1.869318907582153,
+      "neurons_preserved": 0.9999849580112032,
+      "outcome": "SUPPRESSED",
+      "param": "Infection beta",
+      "value": 0.003
+    },
+    {
+      "peak_virus": 1000.0,
+      "final_virus": 72.42145674784787,
+      "final_infected": 19.473043952188664,
+      "neurons_preserved": 0.999925606958408,
+      "outcome": "ONGOING",
+      "param": "Infection beta",
+      "value": 0.006
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "Infection beta",
+      "value": 0.012
+    },
+    {
+      "peak_virus": 997523.2098911928,
+      "final_virus": 997523.2098911928,
+      "final_infected": 286359.75916761643,
+      "neurons_preserved": 0.5785484851587167,
+      "outcome": "ONGOING",
+      "param": "Infection beta",
+      "value": 0.024
+    },
+    {
+      "peak_virus": 2261870.9295396097,
+      "final_virus": 756592.1948117119,
+      "final_infected": 192180.73363962886,
+      "neurons_preserved": 0.0008208878296655326,
+      "outcome": "ONGOING",
+      "param": "Infection beta",
+      "value": 0.048
+    },
+    {
+      "peak_virus": 30760.68550953169,
+      "final_virus": 30760.68550953169,
+      "final_infected": 8959.326626444868,
+      "neurons_preserved": 0.9897962343302673,
+      "outcome": "ONGOING",
+      "param": "Inf. death delta",
+      "value": 0.005
+    },
+    {
+      "peak_virus": 14557.22417551472,
+      "final_virus": 14557.22417551472,
+      "final_infected": 4195.6387623495075,
+      "neurons_preserved": 0.9944733633088197,
+      "outcome": "ONGOING",
+      "param": "Inf. death delta",
+      "value": 0.01
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "Inf. death delta",
+      "value": 0.02
+    },
+    {
+      "peak_virus": 1000.0,
+      "final_virus": 165.74195916636353,
+      "final_infected": 44.734890320231635,
+      "neurons_preserved": 0.9997292771136908,
+      "outcome": "ONGOING",
+      "param": "Inf. death delta",
+      "value": 0.04
+    },
+    {
+      "peak_virus": 1000.0,
+      "final_virus": 0.46330924345598157,
+      "final_infected": 0.11408939195757557,
+      "neurons_preserved": 0.9999335800406534,
+      "outcome": "SUPPRESSED",
+      "param": "Inf. death delta",
+      "value": 0.08
+    },
+    {
+      "peak_virus": 3260.7913251869177,
+      "final_virus": 3260.7913251869177,
+      "final_infected": 919.4226074458865,
+      "neurons_preserved": 0.998278799178681,
+      "outcome": "ONGOING",
+      "param": "treatment delay (h)",
+      "value": 24
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "treatment delay (h)",
+      "value": 48
+    },
+    {
+      "peak_virus": 5600.733587029012,
+      "final_virus": 5600.733587029012,
+      "final_infected": 1578.402834118622,
+      "neurons_preserved": 0.9970101743552068,
+      "outcome": "ONGOING",
+      "param": "treatment delay (h)",
+      "value": 72
+    },
+    {
+      "peak_virus": 9596.974929715683,
+      "final_virus": 9596.974929715683,
+      "final_infected": 2704.148161091811,
+      "neurons_preserved": 0.9948546173447698,
+      "outcome": "ONGOING",
+      "param": "treatment delay (h)",
+      "value": 96
+    },
+    {
+      "peak_virus": 16402.49577679843,
+      "final_virus": 16402.49577679843,
+      "final_infected": 4621.042722814979,
+      "neurons_preserved": 0.9911750888308534,
+      "outcome": "ONGOING",
+      "param": "treatment delay (h)",
+      "value": 120
+    },
+    {
+      "peak_virus": 47105.613771564545,
+      "final_virus": 47105.613771564545,
+      "final_infected": 13258.208044083713,
+      "neurons_preserved": 0.9744466520519317,
+      "outcome": "ONGOING",
+      "param": "treatment delay (h)",
+      "value": 168
+    },
+    {
+      "peak_virus": 4027.56613889745,
+      "final_virus": 4027.56613889745,
+      "final_infected": 1135.0846071035899,
+      "neurons_preserved": 0.99788055379086,
+      "outcome": "ONGOING",
+      "param": "dose (mg)",
+      "value": 50
+    },
+    {
+      "peak_virus": 3841.8909201631027,
+      "final_virus": 3841.8909201631027,
+      "final_infected": 1082.5753204371645,
+      "neurons_preserved": 0.9979757415975926,
+      "outcome": "ONGOING",
+      "param": "dose (mg)",
+      "value": 100
+    },
+    {
+      "peak_virus": 3517.7563361291673,
+      "final_virus": 3517.7563361291673,
+      "final_infected": 991.1718321524223,
+      "neurons_preserved": 0.9981410046193341,
+      "outcome": "ONGOING",
+      "param": "dose (mg)",
+      "value": 250
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "param": "dose (mg)",
+      "value": 500
+    },
+    {
+      "peak_virus": 3019.513692625824,
+      "final_virus": 3019.513692625824,
+      "final_infected": 851.749783042004,
+      "neurons_preserved": 0.9983909091110647,
+      "outcome": "ONGOING",
+      "param": "dose (mg)",
+      "value": 1000
+    },
+    {
+      "peak_virus": 2639.841015513141,
+      "final_virus": 2639.841015513141,
+      "final_infected": 748.5364073663799,
+      "neurons_preserved": 0.99857153310355,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 1,
+      "VIRAL_EC50_UM": 1
+    },
+    {
+      "peak_virus": 3019.5136663680014,
+      "final_virus": 3019.5136663680014,
+      "final_infected": 851.749776771495,
+      "neurons_preserved": 0.9983909091220918,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 1,
+      "VIRAL_EC50_UM": 3
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 1,
+      "VIRAL_EC50_UM": 6
+    },
+    {
+      "peak_virus": 3517.7227818094193,
+      "final_virus": 3517.7227818094193,
+      "final_infected": 991.1681934272226,
+      "neurons_preserved": 0.9981410116342347,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 1,
+      "VIRAL_EC50_UM": 12
+    },
+    {
+      "peak_virus": 3770.1476603330216,
+      "final_virus": 3770.1476603330216,
+      "final_infected": 1062.1698225452328,
+      "neurons_preserved": 0.9980126726089709,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 1,
+      "VIRAL_EC50_UM": 24
+    },
+    {
+      "peak_virus": 2639.841015513141,
+      "final_virus": 2639.841015513141,
+      "final_infected": 748.5364073663799,
+      "neurons_preserved": 0.99857153310355,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 3,
+      "VIRAL_EC50_UM": 1
+    },
+    {
+      "peak_virus": 3019.5136663680014,
+      "final_virus": 3019.5136663680014,
+      "final_infected": 851.749776771495,
+      "neurons_preserved": 0.9983909091220918,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 3,
+      "VIRAL_EC50_UM": 3
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 3,
+      "VIRAL_EC50_UM": 6
+    },
+    {
+      "peak_virus": 3517.7227818094193,
+      "final_virus": 3517.7227818094193,
+      "final_infected": 991.1681934272226,
+      "neurons_preserved": 0.9981410116342347,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 3,
+      "VIRAL_EC50_UM": 12
+    },
+    {
+      "peak_virus": 3770.1476603330216,
+      "final_virus": 3770.1476603330216,
+      "final_infected": 1062.1698225452328,
+      "neurons_preserved": 0.9980126726089709,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 3,
+      "VIRAL_EC50_UM": 24
+    },
+    {
+      "peak_virus": 2639.841015513141,
+      "final_virus": 2639.841015513141,
+      "final_infected": 748.5364073663799,
+      "neurons_preserved": 0.99857153310355,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 10,
+      "VIRAL_EC50_UM": 1
+    },
+    {
+      "peak_virus": 3019.5136663680014,
+      "final_virus": 3019.5136663680014,
+      "final_infected": 851.749776771495,
+      "neurons_preserved": 0.9983909091220918,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 10,
+      "VIRAL_EC50_UM": 3
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 10,
+      "VIRAL_EC50_UM": 6
+    },
+    {
+      "peak_virus": 3517.7227818094193,
+      "final_virus": 3517.7227818094193,
+      "final_infected": 991.1681934272226,
+      "neurons_preserved": 0.9981410116342347,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 10,
+      "VIRAL_EC50_UM": 12
+    },
+    {
+      "peak_virus": 3770.1476603330216,
+      "final_virus": 3770.1476603330216,
+      "final_infected": 1062.1698225452328,
+      "neurons_preserved": 0.9980126726089709,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 10,
+      "VIRAL_EC50_UM": 24
+    },
+    {
+      "peak_virus": 2639.841015513141,
+      "final_virus": 2639.841015513141,
+      "final_infected": 748.5364073663799,
+      "neurons_preserved": 0.99857153310355,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 30,
+      "VIRAL_EC50_UM": 1
+    },
+    {
+      "peak_virus": 3019.5136663680014,
+      "final_virus": 3019.5136663680014,
+      "final_infected": 851.749776771495,
+      "neurons_preserved": 0.9983909091220918,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 30,
+      "VIRAL_EC50_UM": 3
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 30,
+      "VIRAL_EC50_UM": 6
+    },
+    {
+      "peak_virus": 3517.7227818094193,
+      "final_virus": 3517.7227818094193,
+      "final_infected": 991.1681934272226,
+      "neurons_preserved": 0.9981410116342347,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 30,
+      "VIRAL_EC50_UM": 12
+    },
+    {
+      "peak_virus": 3770.1476603330216,
+      "final_virus": 3770.1476603330216,
+      "final_infected": 1062.1698225452328,
+      "neurons_preserved": 0.9980126726089709,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 30,
+      "VIRAL_EC50_UM": 24
+    },
+    {
+      "peak_virus": 2639.841015513141,
+      "final_virus": 2639.841015513141,
+      "final_infected": 748.5364073663799,
+      "neurons_preserved": 0.99857153310355,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 100,
+      "VIRAL_EC50_UM": 1
+    },
+    {
+      "peak_virus": 3019.5136663680014,
+      "final_virus": 3019.5136663680014,
+      "final_infected": 851.749776771495,
+      "neurons_preserved": 0.9983909091220918,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 100,
+      "VIRAL_EC50_UM": 3
+    },
+    {
+      "peak_virus": 3258.604889939734,
+      "final_virus": 3258.604889939734,
+      "final_infected": 919.7568526508301,
+      "neurons_preserved": 0.9982695977822749,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 100,
+      "VIRAL_EC50_UM": 6
+    },
+    {
+      "peak_virus": 3517.7227818094193,
+      "final_virus": 3517.7227818094193,
+      "final_infected": 991.1681934272226,
+      "neurons_preserved": 0.9981410116342347,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 100,
+      "VIRAL_EC50_UM": 12
+    },
+    {
+      "peak_virus": 3770.1476603330216,
+      "final_virus": 3770.1476603330216,
+      "final_infected": 1062.1698225452328,
+      "neurons_preserved": 0.9980126726089709,
+      "outcome": "ONGOING",
+      "PD_EC50_UM": 100,
+      "VIRAL_EC50_UM": 24
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "virus": "rabies_g",
+  "n_drugs_screened": 28,
+  "rankings": [
+    {
+      "rank": 1,
+      "drug": "Chloroquine",
+      "score": -6.266232490539551,
+      "target": "Endosome inhibitor"
+    },
+    {
+      "rank": 2,
+      "drug": "Hydroxychloroquine",
+      "score": -6.266232490539551,
+      "target": "Endosome inhibitor"
+    },
+    {
+      "rank": 3,
+      "drug": "Emtricitabine",
+      "score": -6.310558795928955,
+      "target": "Nucleoside analog"
+    },
+    {
+      "rank": 4,
+      "drug": "Acyclovir",
+      "score": -6.331181049346924,
+      "target": "Nucleoside analog"
+    },
+    {
+      "rank": 5,
+      "drug": "Arbidol",
+      "score": -6.333918571472168,
+      "target": "Fusion inhibitor"
+    },
+    {
+      "rank": 6,
+      "drug": "Ganciclovir",
+      "score": -6.336061477661133,
+      "target": "Nucleoside analog"
+    },
+    {
+      "rank": 7,
+      "drug": "Daclatasvir",
+      "score": -6.34580135345459,
+      "target": "HCV NS5A inhibitor"
+    },
+    {
+      "rank": 8,
+      "drug": "Lamivudine",
+      "score": -6.346224784851074,
+      "target": "Nucleoside analog"
+    },
+    {
+      "rank": 9,
+      "drug": "Nitazoxanide",
+      "score": -6.363317489624023,
+      "target": "Broad-spectrum antiviral"
+    },
+    {
+      "rank": 10,
+      "drug": "Valacyclovir",
+      "score": -6.369485855102539,
+      "target": "Nucleoside analog"
+    }
+  ]
+}

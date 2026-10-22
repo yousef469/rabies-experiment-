@@ -1,0 +1,43 @@
+# ─── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ─── Model weights / checkpoints (large binaries; regenerate by training) ──
+checkpoints/
+checkpoints_multivirus/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# ─── Large / regenerable data & caches ────────────────────
+boltz_test/
+*.npy
+*.tar.gz
+*.zip
+
+# ─── OS / editor ──────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# ─── Large datasets / external repos (excluded to keep the repo lean) ──
+# Core validated-pipeline data (DILIrank, ClinTox, Tox21, SIDER, SMILES) IS kept.
+# These heavier datasets are used only by exploratory scripts.
+data/viroGym
+data/dms/
+data/rabies_genomes/
+data/toxcast.csv
+data/hiv.csv
+
+# ─── Logs / scratch ───────────────────────────────────────
+*.log
+/tmp/
+scratch/

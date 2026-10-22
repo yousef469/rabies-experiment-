@@ -1,0 +1,16 @@
+{
+  "_note": "This file records the lead molecule selected by the design pipeline. It is NOT evidence of a cure. Under the corrected outcome definition (viral + infected-cell extinction with no rebound), no molecule achieved clearance; the genetic algorithm never writes a cured=true record.",
+  "generation": 2,
+  "smiles": "CC1=CC(=O)NC2=CC=CC=C12",
+  "selected_as": "highest heuristic ranking score in the GA search (ordering metric only)",
+  "heuristic_score": 0.7351408658743521,
+  "outcome_under_assumed_parameters": {
+    "outcome": "ONGOING",
+    "cleared": false,
+    "peak_virus": 3258.6,
+    "final_virus": 3258.6,
+    "final_infected_cells": 919.76,
+    "neurons_preserved_fraction": 0.9983
+  },
+  "interpretation": "The infection is NOT cleared: virions and infected cells remain high at the end of the simulation. The ~99.8% neuron-preservation figure is a model output under assumed parameters and does not imply clearance. See LIMITATIONS.md."
+}

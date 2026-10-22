@@ -1,0 +1,23 @@
+# Core numerical / ML stack
+torch>=2.0.0
+torchvision
+torch-geometric>=2.4.0
+numpy
+pandas
+scikit-learn
+scipy
+
+# Cheminformatics
+rdkit>=2023.3.1
+meeko>=0.5.0
+
+# Data I/O
+openpyxl            # reads the DILIrank .xlsx
+requests
+
+# Structure handling (docking receptor prep)
+biopython
+
+# Plotting / progress
+matplotlib
+tqdm

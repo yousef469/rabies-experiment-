@@ -1,0 +1,182 @@
+[
+  {
+    "smiles": "BrC1CCCNC1",
+    "score": -5.0210137367248535,
+    "mw": 164.0,
+    "logp": 1.13,
+    "tpsa": 12.0,
+    "hbd": 1,
+    "hba": 1
+  },
+  {
+    "smiles": "COCCOC1CCC(=O)N1",
+    "score": -5.050325870513916,
+    "mw": 159.2,
+    "logp": -0.11,
+    "tpsa": 47.6,
+    "hbd": 1,
+    "hba": 3
+  },
+  {
+    "smiles": "COCCOC1CCCNC1",
+    "score": -5.056396961212158,
+    "mw": 159.2,
+    "logp": 0.4,
+    "tpsa": 30.5,
+    "hbd": 1,
+    "hba": 3
+  },
+  {
+    "smiles": "NC1=CC=C2CCCN(CCC=C1)C2=O",
+    "score": -5.070955276489258,
+    "mw": 204.3,
+    "logp": 1.34,
+    "tpsa": 46.3,
+    "hbd": 1,
+    "hba": 2
+  },
+  {
+    "smiles": "O=C1CCC(c2ccccc2)N1",
+    "score": -5.075573444366455,
+    "mw": 161.2,
+    "logp": 1.64,
+    "tpsa": 29.1,
+    "hbd": 1,
+    "hba": 1
+  },
+  {
+    "smiles": "O=C(Nc1cccc2[nH]c(=O)[nH]c12)C1CC1",
+    "score": -5.098669528961182,
+    "mw": 217.2,
+    "logp": 1.2,
+    "tpsa": 77.8,
+    "hbd": 3,
+    "hba": 2
+  },
+  {
+    "smiles": "NS(=O)(=O)C1CCCNC1",
+    "score": -5.102071762084961,
+    "mw": 164.2,
+    "logp": -0.97,
+    "tpsa": 72.2,
+    "hbd": 2,
+    "hba": 3
+  },
+  {
+    "smiles": "O=c1[nH]c2cccc(Cl)c2[nH]1",
+    "score": -5.119622230529785,
+    "mw": 168.6,
+    "logp": 1.51,
+    "tpsa": 48.6,
+    "hbd": 2,
+    "hba": 1
+  },
+  {
+    "smiles": "O=C1CCC(Br)N1",
+    "score": -5.126330375671387,
+    "mw": 164.0,
+    "logp": 0.62,
+    "tpsa": 29.1,
+    "hbd": 1,
+    "hba": 1
+  },
+  {
+    "smiles": "O=c1[nH]c2cccc(Br)c2[nH]1",
+    "score": -5.12854528427124,
+    "mw": 213.0,
+    "logp": 1.62,
+    "tpsa": 48.6,
+    "hbd": 2,
+    "hba": 1
+  },
+  {
+    "smiles": "NCCNc1cccc2[nH]c(=O)[nH]c12",
+    "score": -5.135045051574707,
+    "mw": 192.2,
+    "logp": 0.23,
+    "tpsa": 86.7,
+    "hbd": 4,
+    "hba": 3
+  },
+  {
+    "smiles": "CC(=O)Nc1ccnc(N)n1",
+    "score": -5.139532089233398,
+    "mw": 152.2,
+    "logp": 0.02,
+    "tpsa": 80.9,
+    "hbd": 2,
+    "hba": 4
+  },
+  {
+    "smiles": "c1ccc(C2CCCNC2)cc1",
+    "score": -5.139550685882568,
+    "mw": 161.2,
+    "logp": 2.15,
+    "tpsa": 12.0,
+    "hbd": 1,
+    "hba": 1
+  },
+  {
+    "smiles": "COC(=O)c1cccc2[nH]c(=O)[nH]c12",
+    "score": -5.142370223999023,
+    "mw": 192.2,
+    "logp": 0.64,
+    "tpsa": 75.0,
+    "hbd": 2,
+    "hba": 3
+  },
+  {
+    "smiles": "O=c1[nH]c2cccc(O)c2[nH]1",
+    "score": -5.144762992858887,
+    "mw": 150.1,
+    "logp": 0.56,
+    "tpsa": 68.9,
+    "hbd": 3,
+    "hba": 2
+  },
+  {
+    "smiles": "CCOc1cccc2[nH]c(=O)[nH]c12",
+    "score": -5.1460041999816895,
+    "mw": 178.2,
+    "logp": 1.25,
+    "tpsa": 57.9,
+    "hbd": 2,
+    "hba": 2
+  },
+  {
+    "smiles": "NS(=O)(=O)c1cccc2[nH]c(=O)[nH]c12",
+    "score": -5.146061420440674,
+    "mw": 213.2,
+    "logp": -0.5,
+    "tpsa": 108.8,
+    "hbd": 3,
+    "hba": 3
+  },
+  {
+    "smiles": "O=C(Nc1cccc2[nH]c(=O)[nH]c12)c1ccc(Br)cc1",
+    "score": -5.148719787597656,
+    "mw": 332.2,
+    "logp": 2.87,
+    "tpsa": 77.8,
+    "hbd": 3,
+    "hba": 2
+  },
+  {
+    "smiles": "O=C(O)c1cccc2[nH]c(=O)[nH]c12",
+    "score": -5.150073528289795,
+    "mw": 178.1,
+    "logp": 0.55,
+    "tpsa": 85.9,
+    "hbd": 3,
+    "hba": 2
+  },
+  {
+    "smiles": "NCCOc1cccc2[nH]c(=O)[nH]c12",
+    "score": -5.150817394256592,
+    "mw": 193.2,
+    "logp": 0.19,
+    "tpsa": 83.9,
+    "hbd": 3,
+    "hba": 3
+  }
+]
